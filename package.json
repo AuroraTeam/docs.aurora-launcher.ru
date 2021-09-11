@@ -1,0 +1,27 @@
+{
+  "name": "docs.aurora-launcher.ru",
+  "version": "0.0.1",
+  "description": "Репозиторий сайта docs.aurora-launcher.ru",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "AuroraTeam",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.25"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AuroraTeam/docs.aurora-launcher.ru.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AuroraTeam/docs.aurora-launcher.ru/issues"
+  },
+  "homepage": "https://github.com/AuroraTeam/docs.aurora-launcher.ru#readme"
+}
