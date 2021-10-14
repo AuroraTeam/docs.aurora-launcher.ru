@@ -4,9 +4,9 @@ title: Главная
 heroImage: /logo.png
 actions:
   - text: Подробнее
-    link: /basic
+    link: /basic/#начало-работы
     type: primary
   - text: Загрузить
-    link: https://github.com/AuroraTeam/LauncherServer
+    link: https://aurora-launcher.ru/download/
     type: secondary
 ---

@@ -15,6 +15,18 @@ module.exports = {
         text: "Для разработчиков",
         link: "/for-developers/",
       },
+      {
+        text: "На главный сайт",
+        link: "https://aurora-launcher.ru",
+      },
+      {
+        text: "Discord",
+        link: "https://discord.aurora-launcher.ru",
+      },
+      {
+        text: "GitHub",
+        link: "https://github.com/AuroraTeam/LauncherServer",
+      },
     ],
     sidebar: {
       "/basic/": [
