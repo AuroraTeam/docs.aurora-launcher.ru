@@ -48,4 +48,12 @@ module.exports = {
       ],
     },
   },
+  plugins: [
+    [
+      "@vuepress/plugin-google-analytics",
+      {
+        id: "G-Z4BQX6LZKB",
+      },
+    ],
+  ],
 };
