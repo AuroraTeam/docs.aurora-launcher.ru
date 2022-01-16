@@ -1,0 +1,46 @@
+:root {
+  scroll-behavior: smooth;
+
+  --c-brand: #2575fc;
+  --c-brand-light: #2575fc;
+  --c-tip: var(--c-brand);
+}
+
+.back-to-top {
+  --back-to-top-color: var(--c-brand);
+  --back-to-top-color-hover: var(--c-brand-light);
+}
+
+.icon.outbound {
+  color: var(--c-brand);
+}
+
+.action-button.external:hover .icon.outbound {
+  color: var(--c-bg);
+}
+
+html.dark {
+  --c-brand: #2575fc;
+  --c-brand-light: #2575fc;
+  --c-tip: var(--c-brand);
+
+  --c-warning-title: var(--c-warning);
+  --c-warning-bg: var(--c-bg-light);
+  --c-warning-text: var(--c-text);
+  --c-danger-title: var(--c-danger);
+  --c-danger-bg: var(--c-bg-light);
+  --c-danger-text: var(--c-text);
+  --c-details-bg: var(--c-bg-light);
+
+  .home .hero .action-button {
+    &:not(.secondary) {
+      color: #fff;
+    }
+    &:hover {
+      color: #fff;
+      .icon.outbound {
+        color: #fff;
+      }
+    }
+  }
+}
