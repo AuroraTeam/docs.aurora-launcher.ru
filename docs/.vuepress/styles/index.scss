@@ -19,6 +19,11 @@
   color: var(--c-bg);
 }
 
+.home .hero .action-button {
+  padding: 0.4rem 1.2rem 0.6rem;
+  border-radius: 26px;
+}
+
 html.dark {
   --c-brand: #2575fc;
   --c-brand-light: #2575fc;
@@ -33,9 +38,6 @@ html.dark {
   --c-details-bg: var(--c-bg-light);
 
   .home .hero .action-button {
-    padding: 0.4rem 1.2rem 0.6rem;
-    border-radius: 26px;
-
     &.primary {
       color: #fff;
     }
