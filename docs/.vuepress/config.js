@@ -57,7 +57,19 @@ module.exports = {
       },
       {
         text: "Для разработчиков",
-        link: "/for-developers/",
+        children: [
+          {
+            text: "Aurora API",
+            children: [
+              "/for-developers/api/info.md",
+              "/for-developers/api/errors.md",
+            ],
+          },
+          {
+            text: "Прочее",
+            children: ["/for-developers/mirrors.md"],
+          },
+        ],
       },
       {
         text: "На главный сайт",
@@ -79,15 +91,21 @@ module.exports = {
           children: ["/basic/README.md", "/basic/clients.md"],
         },
       ],
+      "/for-developers/api/": [
+        {
+          text: "Aurora API",
+          collapsible: true,
+          children: [
+            "/for-developers/api/info.md",
+            "/for-developers/api/errors.md",
+          ],
+        },
+      ],
       "/for-developers/": [
         {
-          text: "Для разработчиков",
-          children: [
-            "/for-developers/README.md",
-            "/for-developers/mirrors.md",
-            "/for-developers/api.md",
-            "/for-developers/errors.md",
-          ],
+          text: "Прочее",
+          collapsible: true,
+          children: ["/for-developers/mirrors.md"],
         },
       ],
     },
