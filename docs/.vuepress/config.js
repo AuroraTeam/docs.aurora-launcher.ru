@@ -1,3 +1,6 @@
+const navbar = require("./navbar");
+const sidebar = require("./sidebar");
+
 module.exports = {
   lang: "ru",
   title: "Aurora Launcher",
@@ -48,66 +51,33 @@ module.exports = {
     ],
     ["meta", { name: "theme-color", content: "#ffffff" }],
   ],
+  locales: {
+    "/": {
+      lang: "alpha",
+    },
+    "/next/": {
+      lang: "next",
+    },
+  },
   themeConfig: {
     logo: "/logo.png",
-    navbar: [
-      {
-        text: "Базовая настройка",
-        link: "/basic/",
+    // navbar,
+    // sidebar,
+    locales: {
+      "/": {
+        navbar: navbar.alpha,
+        sidebar: sidebar.alpha,
+        selectLanguageName: "alpha",
+        selectLanguageText: "alpha",
+        selectLanguageAriaLabel: "alpha",
       },
-      {
-        text: "Для разработчиков",
-        children: [
-          {
-            text: "Aurora API",
-            children: [
-              "/for-developers/api/info.md",
-              "/for-developers/api/errors.md",
-            ],
-          },
-          {
-            text: "Прочее",
-            children: ["/for-developers/mirrors.md"],
-          },
-        ],
+      "/next/": {
+        navbar: navbar.next,
+        sidebar: sidebar.next,
+        selectLanguageName: "next",
+        selectLanguageText: "next",
+        selectLanguageAriaLabel: "next",
       },
-      {
-        text: "На главный сайт",
-        link: "https://aurora-launcher.ru",
-      },
-      {
-        text: "Discord",
-        link: "https://discord.aurora-launcher.ru",
-      },
-      {
-        text: "GitHub",
-        link: "https://github.com/AuroraTeam/LauncherServer",
-      },
-    ],
-    sidebar: {
-      "/basic/": [
-        {
-          text: "Базовая настройка",
-          children: ["/basic/README.md", "/basic/clients.md"],
-        },
-      ],
-      "/for-developers/api/": [
-        {
-          text: "Aurora API",
-          collapsible: true,
-          children: [
-            "/for-developers/api/info.md",
-            "/for-developers/api/errors.md",
-          ],
-        },
-      ],
-      "/for-developers/": [
-        {
-          text: "Прочее",
-          collapsible: true,
-          children: ["/for-developers/mirrors.md"],
-        },
-      ],
     },
   },
   plugins: [

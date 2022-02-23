@@ -1,5 +1,9 @@
 # Общая информация
 
+:::warning
+Данный раздел в процессе обновления
+:::
+
 API для общения лаунчера с лаунчер-сервером реализован посредством клиент-серверного подключения через [WebSocket](https://developer.mozilla.org/ru/docs/Web/API/WebSocket).
 
 ## Обмен данными
@@ -11,14 +15,14 @@ API для общения лаунчера с лаунчер-сервером р
 
 ```ts
 interface Request {
-  type: string;
-  uuid: uuidv4;
-  data: object | array;
+  id?: number | string;
+  method: string;
+  params: object | array;
 }
 
 interface Response {
-  uuid: uuidv4;
-  data: object | array;
+  id?: number | string;
+  result: object | array;
 }
 ```
 
@@ -26,16 +30,13 @@ interface Response {
 
 ```ts
 interface ResponseError {
-  uuid: uuidv4;
-  code: number;
-  message: string;
+  id?: number | string;
+  error: {
+    code: number;
+    message: string;
+  };
 }
 ```
-
-В данных примерах `uuidv4` реализует тип строки являющийся валидным [uuidv4](<https://ru.wikipedia.org/wiki/UUID#Версия_4_(случайный)>) токеном.
-
-В случае, если клиент отдаёт не валидный json объект или объект запроса с отсутствующим uuid, то лаунчсервер возвращает ответ с NIL_UUID (00000000-0000-0000-0000-000000000000).  
-Далее в примерах для значения UUID будет указываться NIL_UUID, но на самом деле вы должны отправлять запросы с `uuidv4`.
 
 ## Аутентификация
 
@@ -43,9 +44,9 @@ interface ResponseError {
 
 ```json
 {
-  "type": "auth",
-  "uuid": "00000000-0000-0000-0000-000000000000",
-  "data": {
+  "id": "00000000-0000-0000-0000-000000000000",
+  "method": "auth",
+  "params": {
     "login": "login123",
     "password": "password456"
   }
@@ -56,8 +57,8 @@ interface ResponseError {
 
 ```json
 {
-  "uuid": "00000000-0000-0000-0000-000000000000",
-  "data": {
+  "id": "00000000-0000-0000-0000-000000000000",
+  "result": {
     "login": "login123",
     "userUUID": "00000000-0000-0000-0000-000000000000",
     "accessToken": "00000000-0000-0000-0000-000000000000"
@@ -69,9 +70,11 @@ interface ResponseError {
 
 ```json
 {
-  "uuid": "00000000-0000-0000-0000-000000000000",
-  "code": 200,
-  "message": "Auth rejected"
+  "id": "00000000-0000-0000-0000-000000000000",
+  "error": {
+    "code": 200,
+    "message": "Auth rejected"
+  }
 }
 ```
 
