@@ -67,16 +67,14 @@ module.exports = {
       "/": {
         navbar: navbar.alpha,
         sidebar: sidebar.alpha,
-        selectLanguageName: "alpha",
-        selectLanguageText: "alpha",
-        selectLanguageAriaLabel: "alpha",
+        selectLanguageName: "v0.0.3",
+        selectLanguageText: "v0.0.3",
       },
       "/next/": {
         navbar: navbar.next,
         sidebar: sidebar.next,
         selectLanguageName: "next",
         selectLanguageText: "next",
-        selectLanguageAriaLabel: "next",
       },
     },
   },

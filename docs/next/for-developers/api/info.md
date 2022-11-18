@@ -4,12 +4,9 @@
 Данный раздел в процессе обновления
 :::
 
-API для общения лаунчера с лаунчер-сервером реализован посредством клиент-серверного подключения через [WebSocket](https://developer.mozilla.org/ru/docs/Web/API/WebSocket).
-
-## Обмен данными
-
-Обмен данными осуществляется по WebSocket каналу в формате JSON.  
-Все неподходящие запросы лаунчер-сервер отбрасывает с кодом ошибки `100` с соответствующим сообщением ошибки парсинга функцией [JSON.parse](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse).
+API для общения лаунчера с лаунчер-сервером реализован посредством клиент-серверного подключения через [WebSocket](https://developer.mozilla.org/ru/docs/Web/API/WebSocket).  
+Обмен данными осуществляется в формате JSON, используя технологию [RPC](https://ru.wikipedia.org/wiki/Удалённый_вызов_процедур).  
+Протокол обмена данных основан на спецификации JSON-RPC 2.0.
 
 Примеры типизации request/response на ЯП Typescript:
 
@@ -21,7 +18,7 @@ interface Request {
 }
 
 interface Response {
-  id?: number | string;
+  id: number | string;
   result: object | array;
 }
 ```
@@ -30,7 +27,7 @@ interface Response {
 
 ```ts
 interface ResponseError {
-  id?: number | string;
+  id: number | string;
   error: {
     code: number;
     message: string;
