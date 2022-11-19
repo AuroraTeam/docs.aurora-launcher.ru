@@ -1,12 +1,11 @@
-const navbar = require("./navbar");
-const sidebar = require("./sidebar");
+import { navbar } from "./navbar";
+import { sidebar } from "./sidebar";
 
-module.exports = {
-  lang: "ru",
+export default {
+  lang: "ru-RU",
   title: "Aurora Launcher",
   description:
     "Лаунчер с удобной кастомизацией дизайна для игровых проектов Minecraft",
-  bundler: "@vuepress/bundler-vite",
   head: [
     [
       "link",
@@ -51,39 +50,24 @@ module.exports = {
     ],
     ["meta", { name: "theme-color", content: "#ffffff" }],
   ],
-  locales: {
-    "/": {
-      lang: "alpha",
-    },
-    "/next/": {
-      lang: "next",
-    },
-  },
   themeConfig: {
     logo: "/logo.png",
-    // navbar,
-    // sidebar,
-    locales: {
-      "/": {
-        navbar: navbar.alpha,
-        sidebar: sidebar.alpha,
-        selectLanguageName: "v0.0.3",
-        selectLanguageText: "v0.0.3",
-      },
-      "/next/": {
-        navbar: navbar.next,
-        sidebar: sidebar.next,
-        selectLanguageName: "next",
-        selectLanguageText: "next",
-      },
-    },
-  },
-  plugins: [
-    [
-      "@vuepress/plugin-google-analytics",
+    nav: navbar,
+    sidebar,
+    socialLinks: [
       {
-        id: "G-Z4BQX6LZKB",
+        icon: "discord",
+        link: "https://discord.aurora-launcher.ru",
+      },
+      {
+        icon: "github",
+        link: "https://github.com/AuroraTeam/LauncherServer",
       },
     ],
-  ],
+    outlineTitle: "На этой странице",
+    docFooter: {
+      prev: "Предыдущая страница",
+      next: "Следующая страница",
+    },
+  },
 };

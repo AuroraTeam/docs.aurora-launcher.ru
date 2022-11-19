@@ -6,12 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -20,7 +15,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
 
       - name: Cache node_modules
         uses: actions/cache@v2
@@ -54,7 +49,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.SSH_SERVER_IP }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
           REMOTE_PORT: ${{ secrets.SSH_SERVER_PORT }}
-          SOURCE: "docs/.vuepress/dist/"
+          SOURCE: "docs/.vitepress/dist/"
           TARGET: ${{ secrets.SITE_DIR }}
 
       - name: Clearing the Cloudflare cache
