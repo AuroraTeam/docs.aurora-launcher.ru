@@ -4,36 +4,10 @@
 Данный раздел в процессе обновления
 :::
 
-API для общения лаунчера с лаунчер-сервером реализован посредством клиент-серверного подключения через [WebSocket](https://developer.mozilla.org/ru/docs/Web/API/WebSocket).  
-Обмен данными осуществляется в формате JSON, используя технологию [RPC](https://ru.wikipedia.org/wiki/Удалённый_вызов_процедур).  
-Протокол обмена данных основан на спецификации JSON-RPC 2.0.
+API для общения лаунчера с лаунчсервером реализован с помощью библиотеки [Aurora RPC](https://rpc.aurora-team.ru).\
+Информацию о работе библиотеки и используемом протоколе можно посмотреть [здесь](https://rpc.aurora-team.ru/guide/introduction.html).
 
-Примеры типизации request/response на ЯП Typescript:
-
-```ts
-interface Request {
-  id?: number | string;
-  method: string;
-  params: object | array;
-}
-
-interface Response {
-  id: number | string;
-  result: object | array;
-}
-```
-
-При возврате ошибки используется следующий тип:
-
-```ts
-interface ResponseError {
-  id: number | string;
-  error: {
-    code: number;
-    message: string;
-  };
-}
-```
+Ниже будут перечислены методы API, доступные для использования в лаунчере.
 
 ## Аутентификация
 
