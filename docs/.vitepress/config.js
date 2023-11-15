@@ -50,6 +50,9 @@ export default {
     ],
     ["meta", { name: "theme-color", content: "#ffffff" }],
   ],
+  sitemap: {
+    hostname: "https://docs.aurora-launcher.ru/",
+  },
   themeConfig: {
     logo: "/logo.png",
     nav: navbar,
