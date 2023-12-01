@@ -9,16 +9,50 @@
 Последний вариант для продвинутых пользователей, описан в статье [Сборка игровых клиентов Minecraft](https://blog.aurora-team.ru/posts/building-minecraft-clients/) (информация немного устарела).
 
 ## Скачивание клиента
-
-Команда: `downloadclient <version> <client name> <?source type>`
-
+::: code-group
+```sh [Шаблон]
+downloadclient <version> <client name> <?source type>
+```
+```sh [Vanilla]
+downloadclient 1.12.2 TestClient
+```
+```sh [Fabric]
+downloadclient 1.12.2 TestClient fabric
+```
+```sh [Quilt]
+downloadclient 1.12.2 TestClient quilt
+```
+```sh [Mirror]
+downloadclient 1.12.2 TestClient mirror
+```
+:::
 где:
 
 - `version` - версия клиента или название сборки с зеркала
 - `client name` - название папки, в которую будет сохранён клиент
 - `source type` - тип источника (необязательно), возможные варианты: `mojang` (используется по умолчанию), `fabric`, `quilt`, `mirror`
 
-Примеры использования:  
-`downloadclient 1.12.2 TestClient` - скачать клиент с официального сервера Mojang  
-`downloadclient 1.12.2 TestClient fabric` - скачать клиент с официального сервера Mojang + установить в сборку Fabric  
-`downloadclient 1.12.2-fabric TestClient mirror` - найти и скачать клиент с зеркал, указаных в конфиге
+## Синхронизация игровых клиентов
+
+```sh
+syncclients
+```
+
+- Применяет изменения в директории `gameFiles\clients\Имя_профиля`
+
+## Синхронизация профиля
+
+```sh
+syncprofiles
+```
+
+- Применяет изменения во игровых профилях лаунчера
+
+## Синхронизация
+
+```sh
+syncall
+```
+
+- Выполнение двух команд сверку вместе
+

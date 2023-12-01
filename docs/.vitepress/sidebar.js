@@ -1,7 +1,7 @@
 export const sidebar = {
   "/basic/": [
     {
-      text: "Базовая настройка",
+      text: "Настройка LauncherServer",
       items: [
         {
           text: "Начало работы",
@@ -10,6 +10,10 @@ export const sidebar = {
         {
           text: "Игровые клиенты",
           link: "/basic/clients",
+        },
+        {
+          text: "Настройка авторизации",
+          link: "/basic/auth",
         },
       ],
     },
