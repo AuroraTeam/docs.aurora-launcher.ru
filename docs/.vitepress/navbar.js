@@ -1,7 +1,7 @@
 export const navbar = [
   {
     text: "Базовая настройка",
-    link: "/basic/",
+    link: "/basic/install-launch-server",
   },
   {
     text: "Для разработчиков",
