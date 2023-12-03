@@ -5,7 +5,7 @@ export const sidebar = {
       items: [
         {
           text: "Начало работы",
-          link: "/basic/",
+          link: "/basic/install-launch-server",
         },
         {
           text: "Игровые клиенты",
@@ -14,6 +14,23 @@ export const sidebar = {
         {
           text: "Настройка авторизации",
           link: "/basic/auth",
+        },
+        {
+          text: "Привязка Minecraft сервера",
+          link: "/basic/server",
+        },
+      ],
+    },
+    {
+      text: "Настройка Launcher",
+      items: [
+        {
+          text: "Начало работы",
+          link: "/basic/install-launch",
+        },
+        {
+          text: "Настройка обновлений",
+          link: "/basic/update",
         },
       ],
     },
