@@ -64,7 +64,7 @@ export default {
       },
       {
         icon: "github",
-        link: "https://github.com/AuroraTeam/LauncherServer",
+        link: "https://github.com/AuroraTeam/AuroraLauncher",
       },
     ],
     outlineTitle: "На этой странице",
