@@ -2,11 +2,12 @@
 
 Проект разнесён на два репозитория:
 
-- [AuroraLauncher](https://github.com/AuroraTeam/AuroraLauncher) - LauncherServer на котором будет размещаться игровые файлы и осуществляется подключение службы авторизации
+- [AuroraLauncher](https://github.com/AuroraTeam/AuroraLauncher) - LauncherServer, который осуществляет раздачу игровых файлов, отвечает за подключение службы аутентификации и др.
 
-- [Launcher](https://github.com/AuroraTeam/Launcher) - Сам Launcher через который будет осуществляться запуск игры
+- [Launcher](https://github.com/AuroraTeam/Launcher) - Сам лаунчер, через который будет осуществляться запуск игры.
 
-Настройка этих двух частей происходит отдельно друг от друга так что начнём с LauncherServer частью проекта.
+Настройка этих двух частей происходит отдельно друг от друга, так что начнём с LauncherServer части проекта.
+
 ## Установка и настройка
 
 После того, как вы скачали [LauncherServer](https://github.com/AuroraTeam/AuroraLauncher/releases), расположите его в любой папке и запустите его.
@@ -17,13 +18,13 @@
 
 ```hjson
 {
-    configVersion: 0 
+    configVersion: 0
     projectID: c83f8c24-6207-45ce-8df4-671f2cb9e137
     projectName: ""
-    lang: ru 
-    branch: stable 
-    env: dev 
-    mirrors: [] 
+    lang: ru
+    branch: stable
+    env: dev
+    mirrors: []
     auth:
     {
         type: accept
