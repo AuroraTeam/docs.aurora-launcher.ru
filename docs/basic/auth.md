@@ -44,14 +44,13 @@ auth:
     joinUrl: http://example.com/join
     hasJoinedUrl: http://example.com/hasJoin
     profileUrl: http://example.com/profile
-    privilegesUrl: http://example.com/privileges
     profilesUrl: http://example.com/profiles
     type: json
   }
 ```
 
 ::: info Для уточнения:
-Для того, что бы данный тип аутентификации работал, вы должны реализовать [следующие запросы](#) в своём API.
+Для того, что бы данный тип аутентификации работал, вы должны реализовать [следующие запросы](/docs/for-developers/json-auth.md) в своём API.
 :::
 
 ## Настройка типа `DB`

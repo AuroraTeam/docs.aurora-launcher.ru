@@ -12,7 +12,7 @@
 
 ::: code-group
 
-```sh [Шаблон]
+```sh [Команда для скачивания]
 downloadclient <version> <client name> <?source type>
 ```
 
@@ -35,7 +35,7 @@ downloadclient 1.19.4 TestClient mirror
 :::
 где:
 
-- `version` - версия клиента или название сборки с зеркала
+- `version` - версия игры или название сборки с зеркала
 - `client name` - название папки, в которую будет сохранён клиент
 - `source type` - тип источника (необязательно), возможные варианты: `mojang` (используется по умолчанию), `fabric`, `quilt`, `mirror`
 
