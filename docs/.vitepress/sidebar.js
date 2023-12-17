@@ -58,6 +58,10 @@ export const sidebar = {
           text: "Альтернативные зеркала",
           link: "/for-developers/mirrors",
         },
+        {
+          text: "Запросы для JSON авторизации",
+          link: "/for-developers/json-auth",
+        },
       ],
     },
   ],
