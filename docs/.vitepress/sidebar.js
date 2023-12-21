@@ -34,6 +34,19 @@ export const sidebar = {
         },
       ],
     },
+    {
+      text: "Дополнительная настройка",
+      items: [
+        {
+          text: "Подпись лаунчера",
+          link: "/basic/signing",
+        },
+        {
+          text: "Настройка Nginx",
+          link: "/basic/nginx",
+        },
+      ],
+    },
   ],
   "/for-developers/api/": [
     {

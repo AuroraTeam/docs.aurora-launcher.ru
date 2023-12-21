@@ -65,7 +65,7 @@ auth:
             user: userlauncher
             password: password
             database: mc
-        };
+        }
         properties: {
             tableName: users
             uuidColumn: uuid
@@ -79,7 +79,7 @@ auth:
             multiplayerServerColumn: multiplayerServer
             multiplayerRealmsColumn: multiplayerRealms
             telemetryColumn: telemetry
-        };
+        }
         type: db
     }
 ```
