@@ -27,9 +27,11 @@ export const window = {
 };
 
 export const api = {
-  ws: "ws://212.109.221.239:1370/ws",
-  web: "http://212.109.221.239:1370",
+  ws: "ws://127.0.0.1:1370/ws",
+  web: "http://127.0.0.1:1370",
 };
+
+export const appPath = '.aurora-launcher';
 ```
 
 ##### Описание настроек конфига
@@ -41,5 +43,6 @@ export const api = {
 - `maximizable` - есть ли возможность разворачивать окно на весь экран
 - `fullscreenable` - есть ли возможность использовать полноэкранный режим (на F11)
 - `title` - название окна лаунчера
-- `ws` - значение `websocket` в файле `LauncherServerConfig.hjson`
-- `web` - значение `web` в файле `LauncherServerConfig.hjson`
+- `ws` - URL до вашего лаунчера
+- `web` - URL до вашего лаунчера
+- `appPath` - как будет называться папка лаунчера у пользователя
