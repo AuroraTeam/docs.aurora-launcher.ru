@@ -23,15 +23,10 @@
   "productName": "Aurora Launcher",
   "publish": [
     {
-      "provider": "s3",
-      "bucket": "1d9331f7-f396817b-b981-4ede-980b-acfe89b8ba52",
-      "endpoint": "https://s3.timeweb.com"
-    },
-    {
       "provider": "github",
       "releaseType": "release",
-      "repo": "LauncherPublic",
-      "owner": "JoCat"
+      "owner": "JoCat",
+      "repo": "LauncherPublic"
     }
   ],
 }
@@ -42,32 +37,10 @@
 - `version` - номер версии лаунчера
 - `productName` - название вашего лаунчера
 - `publish` - куда будут публиковаться новые версии лаунчера
-
-Для настройки оставьте нужный вариант в `package.json`.
-
-:::details Пример:
-
-- Пример настройки `github`:
-
-```json
-"publish": [
-            {
-                "provider": "github",
-                "releaseType": "release",
-                "repo": "LauncherPublic",
-                "owner": "JoCat"
-            }
-        ],
-```
-
-##### Описание настроек конфига
-
 - `provider` - тип публикации обновлений
 - `releaseType` - какой вид имеет релиз
-- `repo` - название публичного репозитория
 - `owner` - владелец репозитория в котором будет опубликован релиз
-
-:::
+- `repo` - название публичного репозитория
 
 ## Выпускаем токен для репозитория
 

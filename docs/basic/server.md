@@ -26,4 +26,4 @@
 - `arguments`- аргументы запуска игры. Те которые передаются в игру
 - `injectorFilename` - название файла authlib injector-а. Не меняйте если не понимаете что это
 - `serverFilename`- название файла сервера
-- `apiUrl`- значение `web` в файле `LauncherServerConfig.hjson`
+- `apiUrl`- URL до вашего лаунчера

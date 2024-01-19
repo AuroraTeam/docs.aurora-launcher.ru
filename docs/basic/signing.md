@@ -31,7 +31,7 @@
         },
 ```
 
-И меняем их на эти.
+И добавляем после эти строчки.
 
 ```json
 "win": {
@@ -40,8 +40,7 @@
                 "sha256"
             ],
             "certificateFile": "./ssl/Sign.pfx",
-            "certificatePassword": "password",
-            "artifactName": "${name}-Setup-${version}.${ext}"
+            "certificatePassword": "password"
         },
 ```
 

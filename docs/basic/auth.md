@@ -62,7 +62,7 @@ auth:
             type: mysql
             host: 127.0.0.1
             port: 3306
-            user: userlauncher
+            username: userlauncher
             password: password
             database: mc
         }
@@ -75,13 +75,40 @@ auth:
             serverIdColumn: serverID
             skinUrlColumn: skinURL
             capeUrlColumn: capeURL
-            onlineChatColumn: onlineChat
-            multiplayerServerColumn: multiplayerServer
-            multiplayerRealmsColumn: multiplayerRealms
-            telemetryColumn: telemetry
         }
         type: db
     }
+```
+
+Для работы этого способа авторизации вам нужно создать вручную все нужные таблицы а базе данных. Вот SQL запрос для создание нужных таблиц.
+
+```sql
+-- Создаём таблицу с пользователями
+CREATE TABLE `users` (
+  `id` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+	`username` CHAR(30) NOT NULL,
+	`password` CHAR(64) NOT NULL,
+	`uuid` CHAR(36) NULL,
+	`accessToken` CHAR(36) NULL,
+	`serverID` VARCHAR(41) NULL,
+	`skinURL` TEXT NULL,
+	`capeURL` TEXT NULL,
+	UNIQUE INDEX `id` (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci' ENGINE=InnoDB;
+
+-- Создаём триггер на генерацию UUID для новых пользователей
+DELIMITER //
+CREATE TRIGGER setUUID BEFORE INSERT ON users
+FOR EACH ROW BEGIN
+IF NEW.uuid IS NULL THEN
+SET NEW.uuid = UUID();
+END IF;
+END; //
+DELIMITER ;
+
+-- Генерирует UUID для уже существующих пользователей
+UPDATE users SET uuid=(SELECT UUID()) WHERE uuid IS NULL;
 ```
 
 ::: warning Важно:
