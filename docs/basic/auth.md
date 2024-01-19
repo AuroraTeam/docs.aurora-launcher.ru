@@ -83,7 +83,7 @@ auth:
 Для работы этого способа авторизации вам нужно создать вручную все нужные таблицы а базе данных. Вот SQL запрос для создание нужных таблиц.
 
 ```sql
--- Создяём таблицу с пользователями
+-- Создаём таблицу с пользователями
 CREATE TABLE `users` (
   `id` SMALLINT(6) NOT NULL AUTO_INCREMENT,
 	`username` CHAR(30) NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE `users` (
 )
 COLLATE='utf8mb4_general_ci' ENGINE=InnoDB;
 
--- Создаёт триггер на генерацию UUID для новых пользователей
+-- Создаём триггер на генерацию UUID для новых пользователей
 DELIMITER //
 CREATE TRIGGER setUUID BEFORE INSERT ON users
 FOR EACH ROW BEGIN
