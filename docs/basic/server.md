@@ -15,7 +15,7 @@
   "arguments": "",
   "injectorFilename": "injector.jar",
   "serverFilename": "server.jar",
-  "apiUrl": "example.com"
+  "apiUrl": "http://127.0.0.1:1370"
 }
 ```
 

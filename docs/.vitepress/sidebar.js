@@ -16,6 +16,10 @@ export const sidebar = {
           link: "/basic/auth",
         },
         {
+          text: "Настройка системы снинов",
+          link: "/basic/system-skin",
+        },
+        {
           text: "Привязка Minecraft сервера",
           link: "/basic/server",
         },
