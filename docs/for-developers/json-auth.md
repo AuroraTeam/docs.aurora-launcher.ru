@@ -2,92 +2,131 @@
 
 Здесь описаны запросы которые вы должны реализовать на вашем сервисе для успешной авторизации в лаунчере.
 
+Ответы на запросы должны придерживаться следующего формата:
+
+```json
+// Успешный запрос
+{
+  "success": true,
+  "result": ...
+}
+// гдe, result - тело ответа
+
+// Ошибка
+{
+  "success": false,
+  "error": "Сообщение об ошибке"
+}
+```
+
+Пример реализации запросов: [easy-cabinet-backend](https://github.com/AuroraTeam/easy-cabinet-backend/tree/master/src/aurora)
+
 ## `POST` /auth
 
 Запрос:
+
 ```json
 {
-    "username": "Имя пользователя",
-    "password": "Пароль пользователя"
+  "login": "Имя пользователя",
+  "password": "Пароль пользователя"
 }
 ```
 
 Ответ:
+
 ```json
 {
-    "username": "Имя пользователя",
-    "userUUID": "UUID пользователя",
-    "accessToken": "accessToken пользователя"
+  "username": "Имя пользователя",
+  "userUUID": "UUID пользователя",
+  "accessToken": "accessToken пользователя",
+  "isAlex": false, // Тонкий скин или нет
+  "skinUrl": "URL адрес до файла скина",
+  "capeUrl": "URL адрес до файла плаща"
 }
+// Поля isAlex, skinUrl, capeUrl - опциональные
 ```
 
 ## `POST` /join
 
 Запрос:
+
 ```json
 {
-    "accessToken": "accessToken пользователя",
-    "userUUID": "UUID пользователя",
-    "serverID": "serverID пользователя"
+  "accessToken": "accessToken пользователя",
+  "userUUID": "UUID пользователя",
+  "serverID": "serverID пользователя"
 }
 ```
 
 Ответ:
+
 ```json
-{
-"boolean"
-}
+boolean // true - успешная авторизация
 ```
 
 ## `POST` /hasJoined
 
 Запрос:
+
 ```json
 {
-    "username": "Имя пользователя",
-    "serverID": "serverID пользователя"
+  "username": "Имя пользователя",
+  "serverID": "serverID пользователя"
 }
 ```
 
 Ответ:
+
 ```json
 {
-    "userUUID": "UUID пользователя",
-    "skinUrl": "URL адрес до файла скина",
-    "capeUrl": "URL адрес до файла плаща"
+  "userUUID": "UUID пользователя",
+  "isAlex": false, // Тонкий скин или нет
+  "skinUrl": "URL адрес до файла скина",
+  "capeUrl": "URL адрес до файла плаща"
 }
+// Поля isAlex, skinUrl, capeUrl - опциональные
 ```
 
 ## `POST` /profile
 
 Запрос:
+
 ```json
 {
-    "userUUID": "UUID пользователя"
+  "userUUID": "UUID пользователя"
 }
 ```
 
 Ответ:
+
 ```json
 {
-    "userUUID": "UUID пользователя",
-    "skinUrl": "URL адрес до файла скина",
-    "capeUrl": "URL адрес до файла плаща"
+  "username": "Имя пользователя",
+  "isAlex": false, // Тонкий скин или нет
+  "skinUrl": "URL адрес до файла скина",
+  "capeUrl": "URL адрес до файла плаща"
 }
+// Поля isAlex, skinUrl, capeUrl - опциональные
 ```
 
-## `POST` /profiles  //Я чё то не понял код запроса
+## `POST` /profiles
 
 Запрос:
+
 ```json
 {
-
+  usernames: ["Имя пользователя 1", "Имя пользователя 2", ...]
 }
 ```
 
 Ответ:
-```json
-{
 
-}
+```json
+[
+  {
+    "id": "UUID пользователя",
+    "name": "Имя пользователя"
+  },
+  ...
+]
 ```
