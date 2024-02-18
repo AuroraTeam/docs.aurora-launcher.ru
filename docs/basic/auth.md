@@ -40,12 +40,12 @@ auth:
 ```hjson
 auth:
   {
+    type: json
     authUrl: http://example.com/auth
     joinUrl: http://example.com/join
-    hasJoinedUrl: http://example.com/hasJoin
+    hasJoinedUrl: http://example.com/hasJoined
     profileUrl: http://example.com/profile
     profilesUrl: http://example.com/profiles
-    type: json
   }
 ```
 
@@ -58,6 +58,7 @@ auth:
 ```hjson
 auth:
     {
+        type: db
         connection: {
             type: mysql
             host: 127.0.0.1
@@ -76,7 +77,6 @@ auth:
             skinUrlColumn: skinURL
             capeUrlColumn: capeURL
         }
-        type: db
     }
 ```
 
