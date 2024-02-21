@@ -11,8 +11,8 @@
   "author": "AuroraTeam",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.31",
-    "vue": "^3.3.9"
+    "vitepress": "^1.0.0-rc.44",
+    "vue": "^3.4.19"
   },
   "directories": {
     "doc": "docs"

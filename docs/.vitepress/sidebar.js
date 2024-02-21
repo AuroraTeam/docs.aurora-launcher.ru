@@ -49,6 +49,10 @@ export const sidebar = {
           text: "Настройка Nginx",
           link: "/basic/nginx",
         },
+        {
+          text: "Установка Forge",
+          link: "/basic/forge",
+        },
       ],
     },
   ],
