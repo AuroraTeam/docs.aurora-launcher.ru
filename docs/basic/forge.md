@@ -54,3 +54,9 @@
 at org.objectweb.asm.ClassVisitor.<init>(ClassVisitor.java:X)  
 at org.objectweb.asm.ClassVisitor.<init>(ClassVisitor.java:X)`  
 скоре всего нужно удалить старые версии семейство библиотек `asm` 
+
+Ошибка вида `java.lang.IllegalStateException: Duplicate key "Пути к библиотеке"`  
+вы добавили два раза одну и тоже библиотеку в список. Удалите оду из записей в профиле.  
+
+Ошибка вида `java.lang.module.ResolutionException: Modules ForgeAutoRenamingTool and org.objectweb.asm.commons export package org.objectweb.asm.commons to module X `  
+удалите библиотеку `ForgeAutoRenamingTool`  
