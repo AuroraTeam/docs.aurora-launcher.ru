@@ -5,7 +5,7 @@
 - `accept` - Применяет любое имя пользователя и игнорирует ввод пароля
 - `reject` - Игнорирует любую аутентификацию в лаунчере
 - `json` - Подключение к внешней API для аутентификации
-- `db` - Подключение к базе данных. Поддерживается: `MySQL`, `MariaDB`.
+- `db` - Подключение к базе данных. Поддерживается: `MySQL`, `MariaDB`, `PostgreSQL`, `SQLite`, `Oracle Database`, `Microsoft SQL Server`.
 
 Для переключения между режимами измените блок `auth` в конфигурации.
 
@@ -59,6 +59,8 @@ auth:
 auth:
     {
         type: db
+        passwordVerfier: bcrypt
+        passwordSalt: random
         connection: {
             type: mysql
             host: 127.0.0.1
@@ -78,6 +80,8 @@ auth:
             capeUrlColumn: capeURL
         }
     }
+// Поле passwordVerfier имеет возможность принять: `hash`, `bcrypt`, `argon2`
+// Поле passwordSalt - опциональное
 ```
 
 Для работы этого способа авторизации вам нужно создать вручную все нужные таблицы а базе данных. Вот SQL запрос для создание нужных таблиц.
@@ -111,6 +115,4 @@ DELIMITER ;
 UPDATE users SET uuid=(SELECT UUID()) WHERE uuid IS NULL;
 ```
 
-::: warning Важно:
-В нынешней реализации шифрование паролей ещё не реализовано. Пароли хранятся в незашифрованном виде!!!
-:::
+
