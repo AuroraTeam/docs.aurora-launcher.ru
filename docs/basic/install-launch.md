@@ -31,7 +31,7 @@ export const api = {
   web: "http://127.0.0.1:1370",
 };
 
-export const appPath = '.aurora-launcher';
+export const appPath = ".aurora-launcher";
 ```
 
 ##### Описание настроек конфига

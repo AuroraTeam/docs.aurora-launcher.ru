@@ -12,23 +12,23 @@
 
 ::: code-group
 
-```sh [Команда для скачивания]
+```cmd [Команда для скачивания]
 downloadclient <version> <client name> <?source type>
 ```
 
-```sh [Vanilla]
+```cmd [Vanilla]
 downloadclient 1.19.4 TestClient
 ```
 
-```sh [Fabric]
+```cmd [Fabric]
 downloadclient 1.19.4 TestClient fabric
 ```
 
-```sh [Quilt]
+```cmd [Quilt]
 downloadclient 1.19.4 TestClient quilt
 ```
 
-```sh [Mirror]
+```cmd [Mirror]
 downloadclient 1.19.4 TestClient mirror
 ```
 

@@ -1,4 +1,4 @@
-import { navbar } from "./navbar";
+import { navbar as nav } from "./navbar";
 import { sidebar } from "./sidebar";
 
 export default {
@@ -11,7 +11,6 @@ export default {
       "link",
       {
         rel: "apple-touch-icon",
-        sizes: "180x180",
         href: "/favicons/apple-touch-icon.png",
       },
     ],
@@ -19,43 +18,28 @@ export default {
       "link",
       {
         rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "/favicons/favicon-32x32.png",
+        sizes: "any",
+        href: "/favicons/favicon.ico",
       },
     ],
     [
       "link",
       {
         rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: "/favicons/favicon-16x16.png",
+        type: "image/svg+xml",
+        href: "/favicons/favicon.svg",
       },
     ],
-    ["link", { rel: "manifest", href: "/favicons/site.webmanifest" }],
-    [
-      "link",
-      {
-        rel: "mask-icon",
-        href: "/favicons/safari-pinned-tab.svg",
-        color: "#2575fc",
-      },
-    ],
-    ["link", { rel: "shortcut icon", href: "/favicons/favicon.ico" }],
-    ["meta", { name: "msapplication-TileColor", content: "#2575fc" }],
-    [
-      "meta",
-      { name: "msapplication-config", content: "/favicons/browserconfig.xml" },
-    ],
-    ["meta", { name: "theme-color", content: "#ffffff" }],
+    ["link", { rel: "manifest", href: "/favicons/manifest.webmanifest" }],
+    ["meta", { name: "theme-color", content: "#0080ff" }],
   ],
   sitemap: {
     hostname: "https://docs.aurora-launcher.ru/",
   },
+  lastUpdated: true,
   themeConfig: {
-    logo: "/logo.png",
-    nav: navbar,
+    logo: "/logo.svg",
+    nav,
     sidebar,
     socialLinks: [
       {
@@ -71,6 +55,16 @@ export default {
     docFooter: {
       prev: "Предыдущая страница",
       next: "Следующая страница",
+    },
+    lastUpdated: {
+      text: "Последнее обновление",
+    },
+    lightModeSwitchTitle: "Переключить на светлую тему",
+    darkModeSwitchTitle: "Переключить на тёмную тему",
+    sidebarMenuLabel: "Меню",
+    returnToTopLabel: "Наверх",
+    search: {
+      provider: "local",
     },
   },
 };

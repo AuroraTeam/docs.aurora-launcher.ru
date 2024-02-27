@@ -4,7 +4,7 @@ hero:
   name: Aurora Launcher
   tagline: Лаунчер с удобной кастомизацией дизайна для игровых проектов Minecraft
   image:
-    src: /logo.png
+    src: /logo.svg
     alt: Aurora Launcher
   actions:
     - theme: brand

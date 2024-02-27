@@ -19,8 +19,8 @@ server {
     charset utf-8;
     #access_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.access.log;
     #error_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.error.log notice;
-    
-    
+
+
     location /files {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
     }
@@ -54,8 +54,8 @@ server {
     ssl_certificate_key /etc/nginx/ssl/КЛЮЧ_ОТ_СЕРТИФИКАТА;
     #access_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.access.log;
     #error_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.error.log notice;
-    
-    
+
+
     location /files {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
     }
@@ -73,4 +73,5 @@ server {
     }
 }
 ```
+
 :::
