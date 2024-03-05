@@ -53,7 +53,7 @@
 
 ## Решение ошибок при запуске игры
 
-Ошибка вида `Caused by: java.lang.NoSuchMethodError: com.google.common.collect.XXXX.XXXXX` скорее всего у вас копии либы `guava` удалите те версии которые были добавлены инсталлятором forge
+Ошибка вида `Caused by: java.lang.NoSuchMethodError: com.google.common.collect.XXXX.XXXXX` скорее всего у вас копии библиотеки `guava` удалите те версии которые были добавлены инсталлятором forge
 
 Ошибка вида `Caused by: java.lang.IllegalArgumentException 
 at org.objectweb.asm.ClassVisitor.<init>(ClassVisitor.java:X)  
@@ -65,3 +65,10 @@ at org.objectweb.asm.ClassVisitor.<init>(ClassVisitor.java:X)`
 
 Ошибка вида `java.lang.module.ResolutionException: Modules ForgeAutoRenamingTool and org.objectweb.asm.commons export package org.objectweb.asm.commons to module X `  
 удалите библиотеку `ForgeAutoRenamingTool`
+
+Ошибка вида `java.lang.module.ResolutionException: Module org.apache.commons.collections4 reads another module named org.apache.commons.collections4`  
+удалить библиотеку `collections4`
+
+Ошибка вида `java.lang.module.ResolutionException: Module minecraft contains package класс из маинкрафт, module client exports package класс из маинкрафт to minecraft`  
+или `java.lang.module.ResolutionException: Modules client and minecraft export package класс из маинкрафт to module forge`  
+прописать библиотекам из папки `net/minecraft/client` дополнительный параметр `"ignoreClassPath": true`

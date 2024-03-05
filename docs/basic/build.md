@@ -16,7 +16,7 @@
 Он длинный так что рассмотрим самые интересные настройки:
 
 ```json
-"version": "0.0.4-rc.1",
+"version": "0.0.4",
 "build": {
   "appId": "ru.aurora.launcher",
   "productName": "Aurora Launcher",
