@@ -33,8 +33,8 @@ export const sidebar = {
           link: "/basic/install-launch",
         },
         {
-          text: "Настройка обновлений",
-          link: "/basic/update",
+          text: "Настройка сборки",
+          link: "/basic/build",
         },
       ],
     },

@@ -28,3 +28,13 @@
 - `injectorFilename` - название файла authlib injector-а. Не меняйте если не понимаете что это
 - `serverFilename`- название файла сервера
 - `apiUrl`- URL до вашего лаунчера
+
+***
+### Использование аргументов запуска
+
+Если по каким-то причинам вам не подходит выше описанный способ можно выполнить все действия в ручную.
+Скачиваем последнею версию [authlib-injector](https://github.com/yushijinhun/authlib-injector/releases) и кладём в папку с сервером. Затем открываете ваш скрипт запуска сервера и сразу после команды `java` добавляете `-javaagent:authlib-injector-{ВЕРСИЯ}.jar=http://127.0.0.1:1370`. По итогу должно получится:
+
+```cmd
+java -javaagent:authlib-injector-{ВЕРСИЯ}.jar=http://127.0.0.1:1370 -Xms3G -Xmx4G -jar paper.jar nogui
+```
