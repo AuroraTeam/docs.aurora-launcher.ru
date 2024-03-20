@@ -16,7 +16,7 @@ export const sidebar = {
           link: "/basic/auth",
         },
         {
-          text: "Настройка системы снинов",
+          text: "Настройка системы скинов",
           link: "/basic/system-skin",
         },
         {
