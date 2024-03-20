@@ -27,7 +27,7 @@ export default {
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/favicons/favicon.svg",
+        href: "/favicons/icon.svg",
       },
     ],
     ["link", { rel: "manifest", href: "/favicons/manifest.webmanifest" }],
