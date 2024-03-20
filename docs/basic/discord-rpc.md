@@ -2,29 +2,30 @@
 
 ```ts
 export const discordRPC = {
-    appId: '1214685301793103902',
-    firstLineText: 'Тестирую лаунчер',
-    secondLineText: 'Чувак, ты думал здесь что-то будет?',
-    buttons: [
-        {
-            label: 'Прекол',
-            url: 'https://youtu.be/dQw4w9WgXcQ',
-        },
-    ],
-    largeImageKey: 'logo',
-    smallImageKey: 'logo_mc',
-    largeImageText: 'Aurora Launcher',
-    smallImageText: 'Minecraft',
+  appId: "1214685301793103902",
+  firstLineText: "Тестирую лаунчер",
+  secondLineText: "Чувак, ты думал здесь что-то будет?",
+  buttons: [
+    {
+      label: "Прекол",
+      url: "https://youtu.be/dQw4w9WgXcQ",
+    },
+  ],
+  largeImageKey: "logo",
+  smallImageKey: "logo_mc",
+  largeImageText: "Aurora Launcher",
+  smallImageText: "Minecraft",
 };
 ```
 
 ##### Описание настроек Discord
+
 - `appId` - Идентификатор приложения
 - `firstLineText` - Первая строчка текста
 - `secondLineText` - Вторая строчка текста
 - `buttons` - Кнопки с ссылками на сайты (могут быть несколько)
-- `label` - Текст на кнопки
-- `url` - Ссылка по которой пройдёт человек после нажатия
+- `label` - Текст на кнопке
+- `url` - Ссылка по которой пройдёт человек после нажатия на кнопку
 - `largeImageKey` - Название основного изображения приложения
 - `smallImageKey` - Название маленького (в правом нижнем углу основного) изображения приложения
 - `largeImageText` - Какой текст будет при наведении на основное изображение
@@ -42,5 +43,5 @@ export const discordRPC = {
 
 ## Где загрузить изображения?
 
-Перейдите на вкладку `Rich Presence` => `Art Assets` и через кнопку `Add Image(s)` загрузите изображение которое вы будите использовать. После выбора снизу во списке появиться ваше изображение. Назовите его как хотите и это имя вы удите использовать в настройке.
+Перейдите на вкладку `Rich Presence` => `Art Assets` и через кнопку `Add Image(s)` загрузите изображение которое вы будете использовать. После выбора снизу во списке появиться ваше изображение. Назовите его как хотите и это имя вы будете использовать в настройке.
 ![2.png](/discord-developer/2.webp)
