@@ -33,6 +33,10 @@ export const sidebar = {
           link: "/basic/install-launch",
         },
         {
+          text: "Настройка Discord активности",
+          link: "/basic/discord-rpc",
+        },
+        {
           text: "Настройка сборки",
           link: "/basic/build",
         },
