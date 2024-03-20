@@ -29,13 +29,31 @@
 - `serverFilename`- название файла сервера
 - `apiUrl`- URL до вашего лаунчсервера
 
+После настройки конфига, сервер можно запустить следующей командой:
+
+::: code-group
+
+```cmd [Linux]
+./sw_linux
+```
+
+```cmd [Windows]
+sw_windows.exe
+```
+
+```cmd [MacOS]
+./sw_macos
+```
+
+:::
+
 ---
 
 ### Использование аргументов запуска
 
 Если по каким-то причинам вам не подходит выше описанный способ можно выполнить все действия в ручную.
-Скачиваем последнею версию [authlib-injector](https://github.com/yushijinhun/authlib-injector/releases) и кладём в папку с сервером. Затем открываете ваш скрипт запуска сервера и сразу после команды `java` добавляете `-javaagent:authlib-injector-{ВЕРСИЯ}.jar=http://127.0.0.1:1370`. По итогу должно получится:
+Скачиваем последнею версию [authlib-injector](https://github.com/yushijinhun/authlib-injector/releases) и кладём в папку с сервером. Затем открываете ваш скрипт запуска сервера и сразу после команды `java` добавляете `-javaagent:{название файла инжектора}={адрес до лаунчсервера}`. По итогу должно получится что-то в таком виде:
 
 ```cmd
-java -javaagent:authlib-injector-{ВЕРСИЯ}.jar=http://127.0.0.1:1370 -Xms3G -Xmx4G -jar paper.jar nogui
+java -javaagent:authlib-injector-1.2.5.jar=http://127.0.0.1:1370 -Xms2G -Xmx4G -jar paper.jar nogui
 ```
