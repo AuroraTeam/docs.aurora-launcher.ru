@@ -43,6 +43,10 @@ export default {
     sidebar,
     socialLinks: [
       {
+        icon: "youtube",
+        link: "https://www.youtube.com/@AuroraTeamRu",
+      },
+      {
         icon: "discord",
         link: "https://discord.aurora-launcher.ru",
       },
