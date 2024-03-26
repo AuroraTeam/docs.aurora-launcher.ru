@@ -9,7 +9,7 @@
 
 ## Скачивание Forge
 
-Скачиваем инсталлятор `forge` с [официального сайта](https://files.minecraftforge.net/net/minecraftforge/forge/). Создаём временную папку в любом месте с любым названием. В корень папку кладём инсталлятор и файл с названием `launcher_profiles.json` в котором находится такие строчки
+Скачиваем инсталлятор `forge` с [официального сайта](https://files.minecraftforge.net/net/minecraftforge/forge/). Создаём временную папку в любом месте с любым названием. В корень папки кладём инсталлятор и файл с названием `launcher_profiles.json` в котором находится такие строчки
 
 ```json
 {
@@ -25,7 +25,7 @@
 
 И запускаем инсталлятор `forge` с указанием установки клиента в эту временную папку. Ждём удачной "Установки" forge.
 
-Копируем содержимое папки `libraries` в `gameFiles\libraries` нашего LaunchServer. Нам так же нужно узнать относительный путь и хеш каждой либы для этого можно воспользоваться [parser-libraries](https://github.com/kostya-main/parser-libraries/releases). Просто положите его в папку `libraries` и он сделает файл `libraries.json` данные которого просто вставить в одноимённую переменную настройках профиля.
+Копируем содержимое папки `libraries` в `gameFiles\libraries` нашего LaunchServer. Вам также нужно прописать в профиле клиента те библиотеки которые вы добавили. Для этого скачиваем [parser-libraries](https://github.com/kostya-main/parser-libraries/releases) и кладём во временной папке директории `libraries` и запускаем. После работы parser-libraries появился файл `libraries.json` его содержимое нужно скопировать в настройку профиля `libraries`.
 
 ## Профиль на версию <1.12.X
 

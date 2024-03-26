@@ -37,7 +37,7 @@ export const discordRPC = {
 
 ## Где найти appId?
 
-Для начала ты должен авторизоваться на сайте [Discord Developer](https://discord.com/developers) и создать своё первое приложение.  
+Для начала вы должны авторизоваться на сайте [Discord Developer](https://discord.com/developers) и создать своё первое приложение.  
 После создания вам нужно скопировать данный идентификатор.
 ![1.png](/discord-developer/1.webp)
 
