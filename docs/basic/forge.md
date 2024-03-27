@@ -25,7 +25,7 @@
 
 И запускаем инсталлятор `forge` с указанием установки клиента в эту временную папку. Ждём удачной "Установки" forge.
 
-Копируем содержимое папки `libraries` в `gameFiles\libraries` нашего LaunchServer. Вам также нужно прописать в профиле клиента те библиотеки которые вы добавили. Для этого скачиваем [parser-libraries](https://github.com/kostya-main/parser-libraries/releases) и кладём во временной папке директории `libraries` и запускаем. После работы parser-libraries появился файл `libraries.json` его содержимое нужно скопировать в настройку профиля `libraries`.
+Нужно прописать в профиле клиента те библиотеки которые вы добавили. Для этого скачиваем [parser-libraries](https://github.com/kostya-main/parser-libraries/releases) и кладём во временной папке директории `libraries` и запускаем. После работы parser-libraries появился файл `libraries.json` его содержимое нужно скопировать в настройку профиля `libraries` и удалите библиотеки, которые повторяются. Скопируйте содержимое из временной папки `libraries` в `gameFiles\libraries` нашего LaunchServer.
 
 ## Профиль на версию <1.12.X
 
