@@ -84,12 +84,14 @@ auth:
 ```
 
 Для работы этого способа авторизации вам нужно создать вручную все нужные таблицы а базе данных.\
-Вот пример SQL запроса для создание нужных таблиц в MySQL:
+Вот пример SQL запроса для создание нужных таблиц:
 
-```sql
+:::code-group
+
+```sql [MySQL]
 -- Создаём таблицу с пользователями
 CREATE TABLE `users` (
-  `id` SMALLINT(6) NOT NULL AUTO_INCREMENT,
+	`id` SMALLINT(6) NOT NULL AUTO_INCREMENT,
 	`username` CHAR(30) NOT NULL,
 	`password` CHAR(64) NOT NULL,
 	`uuid` CHAR(36) NULL,
@@ -110,11 +112,24 @@ SET NEW.uuid = UUID();
 END IF;
 END; //
 DELIMITER ;
-
--- Генерирует UUID для уже существующих пользователей
-UPDATE users SET uuid=(SELECT UUID()) WHERE uuid IS NULL;
 ```
 
+```sql [PosgreSQL]
+-- Создаём таблицу с пользователями
+CREATE TABLE "users" (
+	"id" SERIAL NOT NULL,
+	"username" CHAR(30) NOT NULL,
+	"password" VARCHAR(64) NOT NULL,
+	"uuid" CHAR(36) NULL DEFAULT gen_random_uuid(),
+	"accessToken" CHAR(36) NULL,
+	"serverID" VARCHAR(41) NULL,
+	"skinURL" TEXT NULL,
+	"capeURL" TEXT NULL
+)
+
+```
+
+:::
 ### Проверка пароля
 
 Настройка поля passwordVerfier отвечает за проверку пароля и принимает следующие значения: `hash`, `bcrypt`, `argon2`.\
