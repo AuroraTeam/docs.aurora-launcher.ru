@@ -11,49 +11,49 @@
 Если вы не хотите чтобы у вас угнали лаунчер (в частности дизайн), создавайте Приватный репозиторий.
 ::::
 
-## Добавление ключей
+## Добавление ключей <Badge type="tip" text="для версии 0.5.0 и выше" />
 
-После настройки лаунчер-сервера в его корневой директории должен быть файл `public.pem` его нужно скопировать в корень репозитория лаунчера. Это нужно что-бы сервер знал что к нему подключается лаунчер а не сторонние приложения.
+После настройки лаунчер-сервера в его корневой директории должен появитьсяя файл `public.pem`. Его нужно скопировать в корень репозитория лаунчера. Это нужно чтобы сервер знал что к нему подключается оригинальный лаунчер, а не сторонние приложения.
 
 ## Настройка ланучера
 
 Все настройки хранятся в файле `config.ts`.
 
 ```ts
-import publicKey from './public.pem';
+import publicKey from "./public.pem";
 
 export const window = {
-    width: 900,
-    height: 550,
-    frame: false,
-    resizable: false,
-    maximizable: false,
-    fullscreenable: false,
-    title: 'Aurora Launcher',
+  width: 900,
+  height: 550,
+  frame: false,
+  resizable: false,
+  maximizable: false,
+  fullscreenable: false,
+  title: "Aurora Launcher",
 };
 
 export const api = {
-    ws: 'ws://127.0.0.1:1370/ws',
-    web: 'http://127.0.0.1:1370',
-    publicKey,
+  ws: "ws://127.0.0.1:1370/ws",
+  web: "http://127.0.0.1:1370",
+  publicKey,
 };
 
-export const appPath = '.aurora-launcher';
+export const appPath = ".aurora-launcher";
 
 export const discordRPC = {
-    appId: '1214685301793103902',
-    firstLineText: 'Тестирую лаунчер',
-    secondLineText: 'Чувак, ты думал здесь что-то будет?',
-    buttons: [
-        {
-            label: 'Прекол',
-            url: 'https://youtu.be/dQw4w9WgXcQ',
-        },
-    ],
-    largeImageKey: 'logo',
-    smallImageKey: 'logo_mc',
-    largeImageText: 'Aurora Launcher',
-    smallImageText: 'Minecraft',
+  appId: "1214685301793103902",
+  firstLineText: "Тестирую лаунчер",
+  secondLineText: "Чувак, ты думал здесь что-то будет?",
+  buttons: [
+    {
+      label: "Прекол",
+      url: "https://youtu.be/dQw4w9WgXcQ",
+    },
+  ],
+  largeImageKey: "logo",
+  smallImageKey: "logo_mc",
+  largeImageText: "Aurora Launcher",
+  smallImageText: "Minecraft",
 };
 ```
 
