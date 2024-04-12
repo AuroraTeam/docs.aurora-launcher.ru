@@ -72,3 +72,8 @@ at org.objectweb.asm.ClassVisitor.<init>(ClassVisitor.java:X)`
 Ошибка вида `java.lang.module.ResolutionException: Module minecraft contains package класс из маинкрафт, module client exports package класс из маинкрафт to minecraft`  
 или `java.lang.module.ResolutionException: Modules client and minecraft export package класс из маинкрафт to module forge`  
 прописать библиотекам из папки `net/minecraft/client` дополнительный параметр `"ignoreClassPath": true`
+
+## Как закидывать моды после установки?
+
+Для установки модов перейдите по пути:
+`ВАШЛАУНЧЕР/gameFiles/clients/ИМЯКЛИЕНТА/` и создайте рядом с `minecraft.jar` папку `mods` после чего, загрузите в нее необходимые модификации. Выполните команду `syncall` в вашей консоли лаунчера.
