@@ -15,7 +15,7 @@ map $http_upgrade $connection_upgrade {
     ''      close;
 }
 server {
-    listen 80 default_server;
+    listen 80;
     server_name launcher.ВАШ_ДОМЕН;
     charset utf-8;
     #access_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.access.log;
