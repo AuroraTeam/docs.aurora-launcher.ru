@@ -51,6 +51,20 @@
 - `game` - записывается в `clientArgs` профиля
 - `jvm` - записывается в `jvmArgs` профиля но ищем заполнитель `${version_name}` и пишем название файла minecraft (это мы и записываем если не переименовали). В версии >1.13.X не водится данная настройка.
 
+
+## Запускается ванильный майнкрафт вместо Forge (такая проблема может встретиться на Forge версии 1.7.10)
+
+Если forge вообще не запускается, а просто запускается ванильный майнкрафт, то есть следующее решение:
+1. (Опционально) Выполните удаление `ВСЕХ` библиотек из папки libraries (`Launcher\gameFiles\libraries`)
+2. Перейдите в `%appdata%/.minecraft/libraries` и удалите оттуда все библиотеки, оставив папку пустой
+3. Откройте ЛЮБОЙ лаунчер и выберите проблемную версию Minecraft Forge
+4. Дождитесь полного запуска
+5. Закройте игру, перейдите в тот же самый путь (`%appdata%/.minecraft/libraries`) и скопируйте все библиотеки в `Launcher\gameFiles\libraries`
+6. Закиньте туда в `%appdata%/.minecraft/libraries` [Парсер библиотек](https://github.com/kostya-main/parser-libraries/releases) и запустите его
+7. Откройте ваш профиль клиента в LaunchServer (`profiles/ИМЯПРОФИЛЯ.json`) найдите блок `libraries` и удалите оттуда все элементы, в которых содержится `"type": "libraries"`, элементы других типов (в которых не содержится данная строка) необходимо оставить.
+8. Откройте `libraries.json`, который был сгенерирован в папке `%appdata%/.minecraft/libraries`, скопируйте оттуда все библиотеки и перенесите их в блок `libraries` в профиле вашего клиента (`profiles/ИМЯПРОФИЛЯ.json`).
+9. Выполните команду syncall и о чудо, все заработало 
+
 ## Решение ошибок при запуске игры
 
 Ошибка вида `Caused by: java.lang.NoSuchMethodError: com.google.common.collect.XXXX.XXXXX` скорее всего у вас копии библиотеки `guava` удалите те версии которые были добавлены инсталлятором forge
@@ -72,3 +86,8 @@ at org.objectweb.asm.ClassVisitor.<init>(ClassVisitor.java:X)`
 Ошибка вида `java.lang.module.ResolutionException: Module minecraft contains package класс из маинкрафт, module client exports package класс из маинкрафт to minecraft`  
 или `java.lang.module.ResolutionException: Modules client and minecraft export package класс из маинкрафт to module forge`  
 прописать библиотекам из папки `net/minecraft/client` дополнительный параметр `"ignoreClassPath": true`
+
+## Как закидывать моды после установки?
+
+Для установки модов перейдите по пути:
+`ВАШЛАУНЧЕР/gameFiles/clients/ИМЯКЛИЕНТА/` и создайте рядом с `minecraft.jar` папку `mods` после чего, загрузите в нее необходимые модификации. Выполните команду `syncall` в вашей консоли лаунчера.
