@@ -1,6 +1,10 @@
 export const sidebar = {
   "/basic/": [
     {
+      text: "Словарь определений",
+      link: "/basic/dictionary",
+    },
+    {
       text: "Настройка LauncherServer",
       items: [
         {

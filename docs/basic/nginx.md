@@ -50,7 +50,7 @@ map $http_upgrade $connection_upgrade {
     ''      close;
 }
 server {
-    listen 443 http2 ssl;
+    listen 443 ssl;
     server_name launcher.ВАШ_ДОМЕН;
     ssl_certificate /etc/nginx/ssl/ВАШ_СЕРТИФИКАТ;
     ssl_certificate_key /etc/nginx/ssl/КЛЮЧ_ОТ_СЕРТИФИКАТА;
@@ -60,6 +60,7 @@ server {
 
     location /files {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
+        autoindex on;
     }
     location / {
         proxy_pass http://ws-launcher;

@@ -11,9 +11,9 @@
   "author": "AuroraTeam",
   "license": "MIT",
   "devDependencies": {
-    "@hywax/vitepress-yandex-metrika": "^0.3.3",
-    "vitepress": "^1.0.0-rc.42",
-    "vue": "^3.4.19"
+    "@hywax/vitepress-yandex-metrika": "^0.4.0",
+    "vitepress": "^1.1.4",
+    "vue": "^3.4.27"
   },
   "directories": {
     "doc": "docs"

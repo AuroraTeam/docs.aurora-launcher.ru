@@ -37,6 +37,11 @@ export default {
     hostname: "https://docs.aurora-launcher.ru/",
   },
   lastUpdated: true,
+  markdown: {
+    image: {
+      lazyLoading: true
+    }
+  },
   themeConfig: {
     logo: "/logo.svg",
     nav,

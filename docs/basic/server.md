@@ -33,6 +33,7 @@
 ::: code-group
 
 ```cmd [Linux]
+chmod +x ./sw_linux // Если нет прав на выполнение
 ./sw_linux
 ```
 

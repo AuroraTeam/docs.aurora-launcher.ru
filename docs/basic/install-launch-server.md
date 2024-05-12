@@ -11,6 +11,24 @@
 ## Установка и настройка
 
 После того, как вы скачали [LauncherServer](https://github.com/AuroraTeam/AuroraLauncher/releases), расположите его в любой папке и запустите его.
+Запустить можно таким способом:
+
+::: code-group
+
+```cmd [Linux]
+chmod +x ./LauncherServer-linux // Если нет прав на выполнение
+./LauncherServer-linux
+```
+
+```cmd [Windows]
+LauncherServer-win.exe
+```
+
+```cmd [MacOS]
+./LauncherServer-macos
+```
+
+:::
 Сервер создаст конфигурационный файл и после чего выключится.
 После чего вы можете произвести его настройку.
 Все настройки хранятся в файле `LauncherServerConfig.hjson`.
