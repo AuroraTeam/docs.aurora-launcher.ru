@@ -19,7 +19,7 @@
 }
 ```
 
-Пример реализации запросов: [easy-cabinet-backend](https://github.com/AuroraTeam/easy-cabinet-backend/tree/master/src/aurora)
+Пример реализации запросов: [easy-cabinet-backend](https://github.com/AuroraTeam/EasyCabinet/tree/master/packages/backend/src/aurora)
 
 ## `POST` /auth
 
