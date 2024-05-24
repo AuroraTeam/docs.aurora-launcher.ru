@@ -1,6 +1,6 @@
 {
   "name": "docs.aurora-launcher.ru",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Репозиторий сайта docs.aurora-launcher.ru",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "@hywax/vitepress-yandex-metrika": "^0.4.0",
-    "vitepress": "^1.1.4",
+    "vitepress": "^1.2.2",
     "vue": "^3.4.27"
   },
   "directories": {

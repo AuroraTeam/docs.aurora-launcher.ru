@@ -52,6 +52,7 @@ map $http_upgrade $connection_upgrade {
 server {
     listen 443 ssl;
     server_name launcher.ВАШ_ДОМЕН;
+    charset utf-8;
     ssl_certificate /etc/nginx/ssl/ВАШ_СЕРТИФИКАТ;
     ssl_certificate_key /etc/nginx/ssl/КЛЮЧ_ОТ_СЕРТИФИКАТА;
     #access_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.access.log;
