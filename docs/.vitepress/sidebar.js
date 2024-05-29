@@ -61,6 +61,10 @@ export const sidebar = {
           text: "Установка Forge",
           link: "/basic/forge",
         },
+        {
+          text: "Запуск в виде службы",
+          link: "/basic/demon",
+        },
       ],
     },
   ],
