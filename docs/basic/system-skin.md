@@ -11,7 +11,7 @@
 injector:
 {
     skinDomains: [
-        ".discordapp.net",
+        ".discordapp.net"
         "i.imgur.com"
     ]
 }
