@@ -26,6 +26,9 @@ server {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
         autoindex on;
     }
+    location /release/upload {
+        client_max_body_size 100M;
+    }
     location / {
         proxy_pass http://ws-launcher;
         proxy_http_version 1.1;
@@ -63,6 +66,9 @@ server {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
         autoindex on;
     }
+    location /release/upload {
+        client_max_body_size 100M;
+    }
     location / {
         proxy_pass http://ws-launcher;
         proxy_http_version 1.1;
@@ -96,6 +102,9 @@ server {
     location /files {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
         autoindex on;
+    }
+    location /release/upload {
+        client_max_body_size 100M;
     }
     location / {
         proxy_pass http://ws-launcher;
