@@ -2,19 +2,23 @@
 
 ```ts
 export const discordRPC = {
-  appId: "1214685301793103902",
-  firstLineText: "Тестирую лаунчер",
-  secondLineText: "Чувак, ты думал здесь что-то будет?",
-  buttons: [
-    {
-      label: "Прекол",
-      url: "https://youtu.be/dQw4w9WgXcQ",
+    appId: '1214685301793103902',
+    default: {
+        firstLineText: 'Тестирую лаунчер',
+        secondLineText: 'Чувак, ты думал здесь что-то будет?',
+        buttons: [
+            {
+                label: 'Прекол',
+                url: 'https://youtu.be/dQw4w9WgXcQ',
+            },
+        ],
+        largeImageKey: 'logo',
+        smallImageKey: 'logo_mc',
+        largeImageText: 'Aurora Launcher',
+        smallImageText: 'Minecraft',
     },
-  ],
-  largeImageKey: "logo",
-  smallImageKey: "logo_mc",
-  largeImageText: "Aurora Launcher",
-  smallImageText: "Minecraft",
+    profile: {...},
+    game: {...}
 };
 ```
 
@@ -30,10 +34,20 @@ export const discordRPC = {
 - `smallImageKey` - Название маленького (в правом нижнем углу основного) изображения приложения
 - `largeImageText` - Какой текст будет при наведении на основное изображение
 - `smallImageText` - Какой текст будет при наведении на маленькое изображение
-
+- `default` - Статус который будет при окне авторизации, выбора профиля
+- `profile` - Статус который будет при окне скачивания, запуска игры
+- `game` - Статус который будет во время игры
 :::info Для справки:
 Самая верхняя жирная строка это название приложение которое вы дали при создании.
 ::::
+
+##### Описание заполнителей
+
+- `{server}` - Хранит название профиля который выбрал игрок
+- `{nickname}` - Хранит никнейм игрока
+:::info Для справки:
+Заполнители работают только в статусах `profile` и `game`.
+:::
 
 ## Где найти appId?
 
