@@ -74,6 +74,24 @@ export default {
     returnToTopLabel: "Наверх",
     search: {
       provider: "local",
+      options: {
+        detailedView: true,
+        translations: {
+          button: {
+            buttonText: "Поиск",
+          },
+          modal: {
+            displayDetails: "Детальный просмотр",
+            resetButtonTitle: "Сбросить поиск",
+            noResultsText: "Не найдено",
+            footer: {
+              selectText: "Выбор",
+              navigateText: "Навигация",
+              closeText: "Закрыть",
+            },
+          },
+        },
+      },
     },
   },
 };
