@@ -20,14 +20,12 @@ server {
     charset utf-8;
     #access_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.access.log;
     #error_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.error.log notice;
+    client_max_body_size 100M;
 
 
     location /files {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
         autoindex on;
-    }
-    location /release/upload {
-        client_max_body_size 100M;
     }
     location / {
         proxy_pass http://ws-launcher;
@@ -60,14 +58,12 @@ server {
     ssl_certificate_key /etc/nginx/ssl/КЛЮЧ_ОТ_СЕРТИФИКАТА;
     #access_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.access.log;
     #error_log  /var/log/nginx/launcher.ВАШ_ДОМЕН.error.log notice;
+    client_max_body_size 100M;
 
 
     location /files {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
         autoindex on;
-    }
-    location /release/upload {
-        client_max_body_size 100M;
     }
     location / {
         proxy_pass http://ws-launcher;
@@ -97,14 +93,12 @@ server {
     charset utf-8;
     #access_log  /var/log/nginx/access.log;
     #error_log  /var/log/nginx/error.log notice;
+    client_max_body_size 100M;
 
 
     location /files {
         alias ПУТЬ/ДО/ПАПКИ/gameFiles;
         autoindex on;
-    }
-    location /release/upload {
-        client_max_body_size 100M;
     }
     location / {
         proxy_pass http://ws-launcher;
