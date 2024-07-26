@@ -21,6 +21,7 @@
 - Вкладка `Области применения ключа` в левом столбце выбираем `Digital Signature` в правом `Code Signing` и `Microsoft Individual Code Signing`.
 - Создаём Code Signing сертификат кнопкой `OK`
 - Выделяем Code Signing сертификат и нажимаем `Экспорт` в формате `PKCS#12 chain` и запоминаем пароль он нам пригодиться в настройке `certificatePassword`.
+![1.png](/signing/1.webp)
 
 ## Подпись исполняемого файла
 

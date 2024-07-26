@@ -1,6 +1,7 @@
 :root {
   scroll-behavior: smooth;
 
-  /* TODO */
-  /* https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
+  --vp-c-brand-1: #4f7fff;
+  --vp-c-brand-2: #4c7af6;
+  --vp-c-brand-3: #4269d4;
 }

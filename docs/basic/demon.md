@@ -36,6 +36,14 @@ pm2 save
 ```sh
 sudo nano /etc/systemd/system/launcher.service
 ```
+Создаём отдельного юзера для управления лаунчерсервером:
+```sh
+adduser launchserver --no-create-home --gecos ""
+```
+Чтобы все работало корректно, вам потребуется выдать юзеру права на папку:
+```sh
+sudo chown launchserver:launchserver путь до вашей папки с лаунчсервером
+```
 
 Само содержимое файла:
 ```systemd
@@ -44,14 +52,13 @@ Description=launcher Server
 
 [Service]
 # Укажите путь где у вас размещён лаунчсервер
-ExecStart=LauncherServer-linux
+ExecStart=/home/LauncherServer-linux
 Restart=always
 RestartSec=10
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=launcher
 User=launchserver
-Group=servers
 
 [Install]
 WantedBy=multi-user.target
