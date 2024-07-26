@@ -42,6 +42,7 @@ downloadclient 1.19.4 TestClient mirror
 ::: details Работа с зеркалами
 
 Для загрузки сборок с зеркала вам необходимо сначала найти на просторах сообщества его адрес и разместить его в таком виде:
+
 ```hjson
 {
     mirrors: [
@@ -69,9 +70,12 @@ downloadclient 1.19.4 TestClient mirror
     "servers": [
         {
             "hostname": "example.com",
+            "title": "Test"
+        },
+        {
             "ip": "127.0.0.1",
             "port": 25565,
-            "title": "Test"
+            "title": "Test 2"
         }
     ],
     "javaVersion": 17,
