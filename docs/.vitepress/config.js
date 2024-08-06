@@ -39,13 +39,14 @@ export default {
   lastUpdated: true,
   markdown: {
     image: {
-      lazyLoading: true
-    }
+      lazyLoading: true,
+    },
   },
   themeConfig: {
     logo: "/logo.svg",
     nav,
     sidebar,
+    outline: [2, 3],
     socialLinks: [
       {
         icon: "youtube",
