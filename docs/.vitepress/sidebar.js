@@ -58,6 +58,10 @@ export const sidebar = {
           link: "/basic/nginx",
         },
         {
+          text: "Настройка Сloudflare",
+          link: "/basic/cloudflare",
+        },
+        {
           text: "Установка Forge",
           link: "/basic/forge",
         },
