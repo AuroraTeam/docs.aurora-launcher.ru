@@ -38,12 +38,8 @@
 {
   "username": "Имя пользователя",
   "userUUID": "UUID пользователя",
-  "accessToken": "accessToken пользователя",
-  "isAlex": false, // Тонкий скин или нет
-  "skinUrl": "URL адрес до файла скина",
-  "capeUrl": "URL адрес до файла плаща"
+  "accessToken": "accessToken пользователя"
 }
-// Поля isAlex, skinUrl, capeUrl - опциональные
 ```
 
 ## `POST` /join
@@ -79,12 +75,8 @@ boolean // true - успешная авторизация
 
 ```json
 {
-  "userUUID": "UUID пользователя",
-  "isAlex": false, // Тонкий скин или нет
-  "skinUrl": "URL адрес до файла скина",
-  "capeUrl": "URL адрес до файла плаща"
+  "userUUID": "UUID пользователя"
 }
-// Поля isAlex, skinUrl, capeUrl - опциональные
 ```
 
 ## `POST` /profile
@@ -101,12 +93,8 @@ boolean // true - успешная авторизация
 
 ```json
 {
-  "username": "Имя пользователя",
-  "isAlex": false, // Тонкий скин или нет
-  "skinUrl": "URL адрес до файла скина",
-  "capeUrl": "URL адрес до файла плаща"
+  "username": "Имя пользователя"
 }
-// Поля isAlex, skinUrl, capeUrl - опциональные
 ```
 
 ## `POST` /profiles

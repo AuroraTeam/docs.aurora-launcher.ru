@@ -27,6 +27,12 @@ downloadclient 1.19.4 TestClient fabric
 ```cmd [Quilt]
 downloadclient 1.19.4 TestClient quilt
 ```
+```cmd [NeoForge]
+downloadclient 1.19.4 TestClient neoforge
+```
+```cmd [Forge]
+downloadclient 1.19.4 TestClient forge
+```
 
 ```cmd [Mirror]
 downloadclient 1.19.4 TestClient mirror
@@ -37,7 +43,7 @@ downloadclient 1.19.4 TestClient mirror
 
 - `version` - версия игры или название сборки с зеркала
 - `client name` - название папки, в которую будет сохранён клиент
-- `source type` - тип источника (необязательно), возможные варианты: `mojang` (используется по умолчанию), `fabric`, `quilt`, `mirror`
+- `source type` - тип источника (необязательно), возможные варианты: `mojang` (используется по умолчанию), `fabric`, `quilt`, `neoforge`, `forge`, `mirror`
 
 ::: details Работа с зеркалами
 
@@ -57,6 +63,10 @@ downloadclient 1.19.4 TestClient mirror
 :::
 
 Скачанный клиент будет размещён по пути `gameFiles\clients\Имя_Клиента`. Здесь вы можете размещать все дополнительные файлы для игры.
+
+::: info Важная ремарка:
+Для особо неприветливых модлоадеров нужно скачать установщики и положить его в корень папки лаунчсервера. Так же в системе должна быть Java. В список входит [Forge](https://files.minecraftforge.net) и [NeoFroge](https://projects.neoforged.net/neoforged/neoforge)
+:::
 
 ## Настройка профиля
 
@@ -109,7 +119,7 @@ downloadclient 1.19.4 TestClient mirror
 - `libraries` - список библиотек которые используются
 - `gameJar` - название файла для старта игры
 - `mainClass` - класс старта игры в файле `gameJar`
-- `jvmArgs` - аргументы запуска игры. Те которые начинаются на `-`
+- `jvmArgs` - аргументы запуска игры. Те которые передаются в java
 - `clientArgs` - аргументы запуска игры. Те которые передаются в игру
 - `update` - Не реализованно
 - `updateVerify` - Не реализованно
@@ -118,20 +128,18 @@ downloadclient 1.19.4 TestClient mirror
 
 ## Синхронизация файлов
 
-После каких либо изменений в папках `profiles` и `gameFiles` нужно выполнить синхронизацию.
+Синхронизация выполняется автоматически при изменении файлов. Но при необходимости её можно выполнить через команды:
 
 :::code-group
-
-```sh [синхронизация всего]
+```cmd [синхронизация всего]
 syncall
 ```
 
-```sh [синхронизация профилей]
+```cmd [синхронизация профилей]
 syncprofiles
 ```
 
-```sh [синхронизация игровых файлов]
-syncclients
+```cmd [синхронизация игровых файлов]
+syncclients <?Название профиля>
 ```
-
 :::
