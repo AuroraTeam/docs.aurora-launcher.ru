@@ -43,7 +43,7 @@ downloadclient 1.19.4 TestClient mirror
 
 - `version` - версия игры или название сборки с зеркала
 - `client name` - название папки, в которую будет сохранён клиент
-- `source type` - тип источника (необязательно), возможные варианты: `mojang` (используется по умолчанию), `fabric`, `quilt`, `neoforge`, `forge`, `mirror`
+- `source type` - тип источника (необязательно), используется по умолчанию: `mojang`
 
 ::: details Работа с зеркалами
 
@@ -65,12 +65,12 @@ downloadclient 1.19.4 TestClient mirror
 Скачанный клиент будет размещён по пути `gameFiles\clients\Имя_Клиента`. Здесь вы можете размещать все дополнительные файлы для игры.
 
 ::: info Важная ремарка:
-Для особо неприветливых модлоадеров нужно скачать установщики и положить его в корень папки лаунчсервера. Так же в системе должна быть Java. В список входит [Forge](https://files.minecraftforge.net) и [NeoFroge](https://projects.neoforged.net/neoforged/neoforge)
+Для особо неприветливых модлоадеров нужно скачать установщики и положить его в корень папки лаунчсервера. Так же в системе должна быть Java. В список таких модлоадеров входит [Forge](https://files.minecraftforge.net) и [NeoFroge](https://projects.neoforged.net/neoforged/neoforge)
 :::
 
 ## Настройка профиля
 
-После [скачивания клиента](#скачивание-клиента) нужно настроить профиль выбора версии. Конфигурационный файл находится в папке `profiles` с именем скачанного клиента.
+Файл профиля находится в папке `profiles` с именем скачанного клиента.
 
 ```json
 {
@@ -97,9 +97,9 @@ downloadclient 1.19.4 TestClient mirror
     "mainClass": "net.fabricmc.loader.impl.launch.knot.KnotClient",
     "jvmArgs": [],
     "clientArgs": [],
-    "update": [],
-    "updateVerify": [],
-    "updateExclusions": [],
+    "update": ["server.dat"],
+    "updateVerify": ["mods/", "config/"],
+    "updateExclusions": ["mods/.cache/"],
     "whiteListType": "null"
 }
 ```
@@ -121,9 +121,9 @@ downloadclient 1.19.4 TestClient mirror
 - `mainClass` - класс старта игры в файле `gameJar`
 - `jvmArgs` - аргументы запуска игры. Те которые передаются в java
 - `clientArgs` - аргументы запуска игры. Те которые передаются в игру
-- `update` - Не реализованно
-- `updateVerify` - Не реализованно
-- `updateExclusions` - Не реализованно
+- `update` - Подробно [тут](./guard.md#настроика-контроля-фаилов-и-папок)
+- `updateVerify` - Подробно [тут](./guard.md#настроика-контроля-фаилов-и-папок)
+- `updateExclusions` - Подробно [тут](./guard.md#настроика-контроля-фаилов-и-папок)
 - `whiteListType` - Не реализованно
 
 ## Синхронизация файлов
@@ -143,3 +143,11 @@ syncprofiles
 syncclients <?Название профиля>
 ```
 :::
+
+## Установка модов
+
+Для того, чтобы установить моды необходимо:
+1. Перейти по пути: `ВАШЛАУНЧЕРСЕРВЕР/gameFiles/clients/ИМЯКЛИЕНТА/`
+2. Создать рядом с `minecraft.jar` папку `mods`
+3. Загрузить в эту папку необходимые модификации.
+4. Установка завершена!

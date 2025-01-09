@@ -16,6 +16,10 @@ export const sidebar = {
           link: "/basic/clients",
         },
         {
+          text: "Настройка средств защиты",
+          link: "/basic/guard",
+        },
+        {
           text: "Настройка авторизации",
           link: "/basic/auth",
         },
