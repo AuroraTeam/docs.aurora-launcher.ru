@@ -115,7 +115,7 @@ END; //
 DELIMITER ;
 ```
 
-```sql [PosgreSQL]
+```sql [PostgreSQL]
 -- Создаём таблицу с пользователями
 CREATE TABLE "users" (
 	"id" SERIAL NOT NULL,
