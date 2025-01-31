@@ -30,7 +30,7 @@ chmod +x ./LauncherServer-macos // Если нет прав на выполне�
 ```
 
 :::
-::: details
+::: details Примечание для MacOS
 
 Если в MacOS после выполнения команды `chmod +x ./LauncherServer-macos` вы получите ошибку `permission denied`, то выполните команду `xattr -dr com.apple.quarantine ./LauncherServer-macos`
 
