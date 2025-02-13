@@ -1,5 +1,6 @@
 import { navbar as nav } from "./navbar";
 import { sidebar } from "./sidebar";
+import lightbox from "vitepress-plugin-lightbox"
 
 export default {
   lang: "ru-RU",
@@ -38,6 +39,10 @@ export default {
   },
   lastUpdated: true,
   markdown: {
+    config: (md) => {
+      // Use lightbox plugin
+      md.use(lightbox, {});
+    },
     image: {
       lazyLoading: true,
     },
