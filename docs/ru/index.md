@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Подробнее
-      link: /basic/install-launch-server
+      link: /ru/basic/install-launch-server
     - theme: alt
       text: Загрузить
       link: https://aurora-launcher.ru/download/
