@@ -1,12 +1,16 @@
-import { navbar as nav } from "./navbar";
-import { sidebar } from "./sidebar";
+import { defineConfig } from 'vitepress';
+import { navbar as nRu } from "./navbar/ru";
+import { navbar as nEn } from "./navbar/en";
+import { sidebar as sRu } from "./sidebar/ru";
+import { sidebar as sEn } from './sidebar/en';
 import lightbox from "vitepress-plugin-lightbox"
 
-export default {
+export default defineConfig ({
   lang: "ru-RU",
   title: "Aurora Launcher",
   description:
     "Лаунчер с удобной кастомизацией дизайна для игровых проектов Minecraft",
+  cleanUrls: true, 
   head: [
     [
       "link",
@@ -47,10 +51,44 @@ export default {
       lazyLoading: true,
     },
   },
+  locales: {
+    root: {
+      label: "Русский",
+      lang: "ru",
+      link: "/ru/",
+      themeConfig: {
+        nav: nRu,
+        sidebar: sRu,
+        outlineTitle: "На этой странице",
+        docFooter: {
+          prev: "Предыдущая страница",
+          next: "Следующая страница",
+        },
+        lastUpdated: {
+          text: "Последнее обновление",
+        },
+        lightModeSwitchTitle: "Переключить на светлую тему",
+        darkModeSwitchTitle: "Переключить на тёмную тему",
+        sidebarMenuLabel: "Меню",
+        returnToTopLabel: "Наверх",
+        editLink: {
+          text: "Редактировать страницу",
+          pattern: "https://github.com/AuroraTeam/docs.aurora-launcher.ru/edit/dev/docs/:path",
+        },
+      },
+    },
+    en: {
+      label: "English",
+      lang: "en",
+      link: "/en/",
+      themeConfig: {
+        nav: nEn,
+        sidebar: sEn,
+      },
+    }
+  },
   themeConfig: {
     logo: "/logo.svg",
-    nav,
-    sidebar,
     outline: [2, 3],
     socialLinks: [
       {
@@ -70,38 +108,33 @@ export default {
         link: "https://t.me/aurora_team_tg",
       },
     ],
-    outlineTitle: "На этой странице",
-    docFooter: {
-      prev: "Предыдущая страница",
-      next: "Следующая страница",
+    editLink: {
+      pattern: "https://github.com/AuroraTeam/docs.aurora-launcher.ru/edit/dev/docs/:path",
     },
-    lastUpdated: {
-      text: "Последнее обновление",
-    },
-    lightModeSwitchTitle: "Переключить на светлую тему",
-    darkModeSwitchTitle: "Переключить на тёмную тему",
-    sidebarMenuLabel: "Меню",
-    returnToTopLabel: "Наверх",
     search: {
       provider: "local",
       options: {
         detailedView: true,
-        translations: {
-          button: {
-            buttonText: "Поиск",
-          },
-          modal: {
-            displayDetails: "Детальный просмотр",
-            resetButtonTitle: "Сбросить поиск",
-            noResultsText: "Не найдено",
-            footer: {
-              selectText: "Выбор",
-              navigateText: "Навигация",
-              closeText: "Закрыть",
+        locales: {
+          ru: {
+            translations: {
+              button: {
+                buttonText: "Поиск",
+              },
+              modal: {
+                displayDetails: "Детальный просмотр",
+                resetButtonTitle: "Сбросить поиск",
+                noResultsText: "Не найдено",
+                footer: {
+                  selectText: "Выбор",
+                  navigateText: "Навигация",
+                  closeText: "Закрыть",
+                },
+              },
             },
           },
         },
       },
     },
   },
-};
+});

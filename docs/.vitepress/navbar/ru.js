@@ -1,7 +1,7 @@
 export const navbar = [
   {
     text: "Базовая настройка",
-    link: "/basic/install-launch-server",
+    link: "/ru/basic/install-launch-server",
   },
   {
     text: "Для разработчиков",
@@ -11,11 +11,11 @@ export const navbar = [
         items: [
           {
             text: "Общая информация",
-            link: "/for-developers/api/info",
+            link: "/ru/for-developers/api/info",
           },
           {
             text: "Список кодов ошибок",
-            link: "/for-developers/api/errors",
+            link: "/ru/for-developers/api/errors",
           },
         ],
       },
@@ -24,11 +24,11 @@ export const navbar = [
         items: [
           {
             text: "Альтернативные зеркала",
-            link: "/for-developers/mirrors",
+            link: "/ru/for-developers/mirrors",
           },
           {
             text: "Запросы для JSON авторизации",
-            link: "/for-developers/json-auth",
+            link: "/ru/for-developers/json-auth",
           },
         ],
       },
