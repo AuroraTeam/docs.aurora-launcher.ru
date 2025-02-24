@@ -1,17 +1,17 @@
-# Общая информация
+# General information
 
 :::warning
-Данный раздел в процессе обновления
+This section in the development
 :::
 
-API для общения лаунчера с лаунчсервером реализован с помощью библиотеки [Aurora RPC](https://rpc.aurora-team.ru).\
-Информацию о работе библиотеки и используемом протоколе можно посмотреть [здесь](https://rpc.aurora-team.ru/guide/introduction.html).
+API for communication between the Launcher and the Launcher Server, released via the [Aurora RPC](https://rpc.aurora-team.ru) library.\
+Information about the library and the protocol used can be found [here](https://rpc.aurora-team.ru/guide/introduction.html).
 
-Ниже будут перечислены методы API, доступные для использования в лаунчере.
+Below are the API methods available for use in the launcher.
 
-## Аутентификация
+## Auth
 
-Для работы с API от лица лаунчера требуется пройти аутентификацию. Для этого нужно отправить запрос типа `auth` со следующим содержимым:
+To work with the API on behalf of the launcher, you need to pass auth. To do this, you need to send an `auth` request with the following content:
 
 ```json
 {
@@ -24,7 +24,7 @@ API для общения лаунчера с лаунчсервером реа�
 }
 ```
 
-Ответ возвращается в следующем формате:
+The response is returned in the following format:
 
 ```json
 {
@@ -37,7 +37,7 @@ API для общения лаунчера с лаунчсервером реа�
 }
 ```
 
-При использовании RejectProvider вы получаете стандартный ResponseError:
+When using RejectProvider you get a standard ResponseError:
 
 ```json
 {
@@ -49,4 +49,4 @@ API для общения лаунчера с лаунчсервером реа�
 }
 ```
 
-Возвращаемое сообщение можно переопределить в конфиге лаунчер-сервера.
+The returned message can be overridden in the Launcher Server config.

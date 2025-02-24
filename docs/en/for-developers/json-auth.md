@@ -1,119 +1,119 @@
-# Запросы для реализации авторизации JSON
+# Requests for JSON authorization
 
-Здесь описаны запросы которые вы должны реализовать на вашем сервисе для успешной авторизации в лаунчере.
+Here are the requests that you must implement on your service for successful authorization in the launcher.
 
-Ответы на запросы должны придерживаться следующего формата:
+Responses to requests must adhere to the following format:
 
 ```json
-// Успешный запрос
+// Successful request
 {
   "success": true,
   "result": ...
 }
-// гдe, result - тело ответа
+// where, result is the response body
 
-// Ошибка
+// Error
 {
   "success": false,
-  "error": "Сообщение об ошибке"
+  "error": "Error message"
 }
 ```
 
-Пример реализации запросов: [easy-cabinet-backend](https://github.com/AuroraTeam/EasyCabinet/tree/master/packages/backend/src/aurora)
+Example of query implementation: [easy-cabinet-backend](https://github.com/AuroraTeam/EasyCabinet/tree/master/packages/backend/src/aurora)
 
 ## `POST` /auth
 
-Запрос:
+Request:
 
 ```json
 {
-  "login": "Имя пользователя",
-  "password": "Пароль пользователя"
+  "login": "Username",
+  "password": "Password"
 }
 ```
 
-Ответ:
+Answer:
 
 ```json
 {
-  "username": "Имя пользователя",
-  "userUUID": "UUID пользователя",
-  "accessToken": "accessToken пользователя"
+  "username": "Username",
+  "userUUID": "UUID",
+  "accessToken": "accessToken"
 }
 ```
 
 ## `POST` /join
 
-Запрос:
+Request:
 
 ```json
 {
-  "accessToken": "accessToken пользователя",
-  "userUUID": "UUID пользователя",
-  "serverID": "serverID пользователя"
+  "accessToken": "accessToken",
+  "userUUID": "UUID",
+  "serverID": "serverID"
 }
 ```
 
-Ответ:
+Answer:
 
 ```json
-boolean // true - успешная авторизация
+boolean // true - successful authorization
 ```
 
 ## `POST` /hasJoined
 
-Запрос:
+Request:
 
 ```json
 {
-  "username": "Имя пользователя",
-  "serverID": "serverID пользователя"
+  "username": "Username",
+  "serverID": "serverID"
 }
 ```
 
-Ответ:
+Answer:
 
 ```json
 {
-  "userUUID": "UUID пользователя"
+  "userUUID": "UUID"
 }
 ```
 
 ## `POST` /profile
 
-Запрос:
+Request:
 
 ```json
 {
-  "userUUID": "UUID пользователя"
+  "userUUID": "UUID"
 }
 ```
 
-Ответ:
+Answer:
 
 ```json
 {
-  "username": "Имя пользователя"
+  "username": "Username"
 }
 ```
 
 ## `POST` /profiles
 
-Запрос:
+Request:
 
 ```json
 {
-  "usernames": ["Имя пользователя 1", "Имя пользователя 2", ...]
+  "usernames": ["Username 1", "Username 2", ...]
 }
 ```
 
-Ответ:
+Answer:
 
 ```json
 [
   {
-    "id": "UUID пользователя",
-    "name": "Имя пользователя"
+    "id": "UUID",
+    "name": "Username"
   },
   ...
 ]

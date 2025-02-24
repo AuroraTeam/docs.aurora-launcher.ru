@@ -1,16 +1,16 @@
-# Список кодов ошибок
+# List of error codes
 
-`100` - **Ошибка парсинга запроса**  
-Скорее всего вы передали не валидный запрос на лаунчсервер
+`100` - **Request parsing error**  
+Most likely, you sent an invalid request to the Launcher Server
 
-`101` - **UUID запроса не определен / Тип запроса не определен**  
-Скорее всего вы не передали UUID или тип запроса
+`101` - **Request UUID not defined / Request type not defined**  
+Most likely, you did not provide a UUID or request type
 
-`102` - **Неизвестный тип запроса**  
-Тип запроса который вы пытаетесь отправить не существует
+`102` - **Unknown request type**  
+The request type you are trying to send does not exist
 
-`103` - **primaryProvider не определен**  
-Не указан primaryProvider, либо указан не валидный
+`103` - **primaryProvider not defined**  
+primaryProvider is not specified or is invalid
 
-`200` - **Авторизация отклонена**  
-Авторизация отклонена лаунчер-сервером (При использовании RejectAuthProvider)
+`200` - **Authorization denied**  
+Authorization was denied by the Launcher Server (when using RejectAuthProvider)

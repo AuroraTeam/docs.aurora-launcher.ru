@@ -1,6 +1,6 @@
-# Альтернативные зеркала
+# Alternative mirrors
 
-При создании своего зеркала нужно придерживаться следующей структуры:
+When creating your mirror, you need to adhere to the following structure:
 
 ```
 root
@@ -17,26 +17,25 @@ root
    ┣ 1.16.5.json
    ...
 ```
-где:
 
-- `clients` - папка с архивами клиентов в `zip` формате.
-- `libraries` - папка с архивами библиотек в `zip` формате.
-- `profiles` - папка с файлами профилей в `json` формате.
+- `clients` - folder with client archives in `zip` format.
+- `libraries` - folder with library archives in `zip` format.
+- `profiles` - folder with profile files in `json` format.
 
-::: info Рекомендация
-Рекомендуется начинать сборку клиента именно с помощью лаунчсервера. Так вы допустите меньше ошибок.
+::: info Recommendation
+It is recommended to start building the client using the Launcher Server. This way you will make fewer mistakes.
 :::
 
-Архивы из папки `clients` содержат в себе файлы и папки которые будут лежать рядом с файлом `minecraft.jar`.  
-Архивы из папки `libraries` содержат в себе иерархию папок которые будут расположены в одноименной папке.  
-Файлы из папки `profiles` по структуре имеют стандартный игровой профиль для лаунчера.  
+Archives from the `clients` folder contain files and folders that will be located next to the `minecraft.jar` file.
+Archives from the `libraries` folder contain a hierarchy of folders that will be located in the folder of the same name.
+Files from the `profiles` folder have a standard game profile for the launcher in terms of structure.
 
-Нахождения файла профиля обязательно для начала загрузки, но нахождения библиотек или дополнительных файлов клиента необязательно.  
-Т.е. к профилю не обязательно иметь архив с библиотеками или архив с клиентом.
+Finding the profile file is required to start downloading, but finding libraries or additional client files is not required.
+That is, the profile does not necessarily have to have an archive with libraries or an archive with the client.
 
-При скачивании клиента пользователями название архива является названием клиента.\
-Т.е. при скачивании клиента командой `downloadclient`, например `downloadclient 1.20.2-fabric TestClient mirror`, будет выкачиваться архивы `1.20.2-fabric.zip` и профиль `1.20.2-fabric.json`.
+When users download the client, the archive name is the client name.
+That is, when downloading the client with the `downloadclient` command, for example `downloadclient 1.20.2-fabric TestClient mirror`, the `1.20.2-fabric.zip` archives and the `1.20.2-fabric.json` profile will be downloaded.
 
-Названия сборок могут быть какими угодно, на ваше усмотрение. Но для удобства рекомендуется соответствовать формату `<версия игры>-<название сборки>`. И по возможности не содержать пробелы, а также быть уникальными.
+The names of the assemblies can be anything, at your discretion. But for convenience, it is recommended to follow the format `<game version>-<assembly name>`. And if possible, do not contain spaces, and also be unique.
 
-Так же рядом можно спокойно класть любые файлы, например сборки серверов, доп. конфиги, установщики java и др. Но не в самих папках `clients, libraries, profiles`
+You can also safely put any files nearby, for example, server assemblies, additional configs, Java installers, etc. But not in the `clients, libraries, profiles` folders themselves
