@@ -5,7 +5,7 @@ export const sidebar = {
         link: "/ru/basic/dictionary",
       },
       {
-        text: "Настройка LauncherServer",
+        text: "Настройка Launcher Server",
         items: [
           {
             text: "Начало работы",
@@ -54,7 +54,7 @@ export const sidebar = {
         text: "Дополнительная настройка",
         items: [
           {
-            text: "Подпись лаунчера",
+            text: "Подпись Launcher",
             link: "/ru/basic/signing",
           },
           {

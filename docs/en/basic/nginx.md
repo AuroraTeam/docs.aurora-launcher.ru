@@ -24,7 +24,7 @@ server {
 
 
     location /files {
-        alias PATCH/TO/FOLDER/gameFiles;
+        alias PATH/TO/FOLDER/gameFiles;
         autoindex on;
     }
     location / {
@@ -62,7 +62,7 @@ server {
 
 
     location /files {
-        alias PATCH/TO/FOLDER/gameFiles;
+        alias PATH/TO/FOLDER/gameFiles;
         autoindex on;
     }
     location / {
@@ -79,7 +79,7 @@ server {
     }
 }
 ```
-```nginx [Без домена]
+```nginx [No domain]
 upstream ws-launcher {
     server 127.0.0.1:1370;
 }
@@ -97,7 +97,7 @@ server {
 
 
     location /files {
-        alias PATCH/TO/FOLDER/gameFiles;
+        alias PATH/TO/FOLDER/gameFiles;
         autoindex on;
     }
     location / {

@@ -27,7 +27,7 @@ export const discordRPC = {
 - `appId` - application ID
 - `firstLineText` - first line of text
 - `secondLineText` - second line of text
-- `buttons` - buttons with a links to websites (there may be several)
+- `buttons` - buttons with links to websites (there may be several)
 - `label` - text in the button
 - `url` - link to website
 - `largeImageKey` - main image name of the application

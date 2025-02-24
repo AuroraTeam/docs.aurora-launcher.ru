@@ -8,11 +8,11 @@ For a convenient and user-friendly interface, we will use [XCA](https://www.hohn
 
 - First, go to the `File` menu and select `New Database`. Name it as you like and place it wherever you want.
 - In the `Certificates` tab, click on `New Certificate`. Now we will create a root certificate.
-- Go to the `Subject` tab and fill in the `commonName` field (e.g., `ServerMC Root CA`)—this is required. Other fields are optional.
+- Go to the `Subject` tab and fill in the `commonName` field (e.g., `ServerMC Root CA`), this is required. Other fields are optional.
 - At the bottom, you will see the `Generate a new key` button. Select the key type `RSA` and length `4096 bit`. A new key must be created for each new certificate.
 - Go to the `Extensions` tab, select `Certification Authority` from the `Type` list. In the `Validity Period` section, specify how many years the certificate will be valid. The typical validity period for a root certificate is between 10 and 50 years. Don't forget to click `Apply` to calculate the dates.
 - Go to the `Key Usage` tab and select `Certificate Sign` and `CRL Sign` in the left column.
-- Go to the `Netscape` tab—nothing should be filled in or selected here.
+- Go to the `Netscape` tab, nothing should be filled in or selected here.
 - Create the root certificate by clicking `OK`.
 - To enhance security, you can create an intermediate certificate. To do this, repeat the steps above, but in the `Signing` section, specify the root certificate. All subsequent certificates should have a shorter validity period than the root certificate.
 - Create a Code Signing certificate by specifying the intermediate certificate (or root certificate) in the `Signing` section.

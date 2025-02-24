@@ -1,7 +1,7 @@
-# Запуск лаунчсервера в виде службы
+# Запуск Launcher Server в виде службы
 
-Для обеспечение стабильности работы лаунчсервера его нужно запускать в фоновом режиме.\
-В режиме службы вы не сможете отправлять команды на лаунчсервер. Когда вы закончите настройку желательно запустить лаунчсервер именно в этом режиме.
+Для обеспечение стабильности работы Launcher Server его нужно запускать в фоновом режиме.\
+В режиме службы вы не сможете отправлять команды на Launcher Server. Когда вы закончите настройку желательно запустить Launcher Server именно в этом режиме.
 
 ## Запуск через `PM2`
 
@@ -10,7 +10,7 @@
 npm install pm2 -g
 ```
 
-После переходим в папку с лаунчсервером и регистрируем файл:
+После переходим в папку с Launcher Server и регистрируем файл:
 ```sh
 pm2 start LauncherServer-linux --name launcher
 ```
@@ -36,13 +36,13 @@ pm2 save
 ```sh
 sudo nano /etc/systemd/system/launcher.service
 ```
-Создаём отдельного юзера для управления лаунчерсервером:
+Создаём отдельного юзера для управления Launcher Server:
 ```sh
 adduser launchserver --no-create-home --gecos ""
 ```
 Чтобы все работало корректно, вам потребуется выдать юзеру права на папку:
 ```sh
-sudo chown launchserver:launchserver путь до вашей папки с лаунчсервером
+sudo chown launchserver:launchserver Путь до вашей папки с Launcher Server
 ```
 
 Само содержимое файла:
@@ -51,7 +51,7 @@ sudo chown launchserver:launchserver путь до вашей папки с ла
 Description=launcher Server
 
 [Service]
-# Укажите путь где у вас размещён лаунчсервер
+# Укажите путь где у вас размещён Launcher Server
 ExecStart=/home/LauncherServer-linux
 Restart=always
 RestartSec=10

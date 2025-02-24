@@ -5,7 +5,7 @@ Download the executable file for your operating system and place it near your Mi
 
 :::warning Warning:
 Be sure to start the server at least once before binding!
-After binding the server, do not forget to return the setting `online-mode=true` to `server.properties`
+After binding the server, do not forget to return the setting `online-mode=true` in `server.properties`
 :::
 
 ```json
@@ -32,7 +32,7 @@ After setting up the config, the server can be started with the following comman
 
 ::: code-group
 ```cmd [Linux]
-chmod +x ./sw_linux
+chmod +x ./sw_linux // If there are no rights to execute
 ./sw_linux
 ```
 

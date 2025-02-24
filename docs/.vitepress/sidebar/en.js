@@ -5,10 +5,10 @@ export const sidebar = {
         link: "/en/basic/dictionary",
       },
       {
-        text: "Setting LauncherServer",
+        text: "Setting Launcher Server",
         items: [
           {
-            text: "Getting started work",
+            text: "Getting started",
             link: "/en/basic/install-launch-server",
           },
           {
@@ -37,7 +37,7 @@ export const sidebar = {
         text: "Setting up Launcher",
         items: [
           {
-            text: "Getting started work",
+            text: "Getting started",
             link: "/en/basic/install-launch",
           },
           {
@@ -81,7 +81,7 @@ export const sidebar = {
             link: "/en/for-developers/api/info",
           },
           {
-            text: "List error code",
+            text: "List of error codes",
             link: "/en/for-developers/api/errors",
           },
         ],
@@ -89,7 +89,7 @@ export const sidebar = {
     ],
     "/en/for-developers/": [
       {
-        text: "Прочее",
+        text: "Miscellaneous",
         items: [
           {
             text: "Alternative mirrors",

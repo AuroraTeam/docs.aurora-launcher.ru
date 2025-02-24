@@ -7,11 +7,11 @@ There are 3 ways to publish new versions of the Launcher:
 - `s3` - cloud file storage. For advanced users
 
 For convenient compilation of the Launcher on different OS, we use the `GitHub Actions` system.\
-After successful build, the assembled Launcher will appear in the Launchserver folder `gameFiles/release`.
+After successful build, the assembled Launcher will appear in the Launcher Server folder `gameFiles/release`.
 
 ## Setting up release uploads
 
-To correctly unload releases, you must already have `public.pem` in the repository and the launchserver address specified in `config.ts`.
+To correctly unload releases, you must already have `public.pem` in the repository and the launcher server address specified in `config.ts`.
 The Launcher Server must have an open port to the internet to be able to get binaries from `GitHub Actions`.
 
 ## Starting the build
@@ -21,7 +21,7 @@ To start the build, go to the `Actions` tab and select `Releases Build` in the l
 
 Before building, do not forget to increase the version in `package.json`. Otherwise, the built Launcher will not be able to be sent to the Launcher Server.
 
-## Localed build
+## Local build
 
 If you are building the launcher for testing purposes (you don't need a working launcher update system) you can use the `npm run build` command to build the launcher for your system.\
 The installation file will be located in the `dist` folder.

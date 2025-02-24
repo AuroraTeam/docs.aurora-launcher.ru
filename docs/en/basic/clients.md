@@ -6,9 +6,9 @@ When assembling the client, you can go 3 ways:
 - Using ready-made clients from mirrors
 - Manual assembly
 
-The last option for advanced users is described in the article [Building Minecraft game clients](https://blog.aurora-team.ru/posts/building-minecraft-clients/) (the information is a little outdated).
+The last option is for advanced users is described in the article [Building Minecraft game clients](https://blog.aurora-team.ru/posts/building-minecraft-clients/) (the information is a little outdated).
 
-## Download client
+## Downloading client
 
 ::: code-group
 
@@ -44,7 +44,7 @@ downloadclient 1.19.4 TestClient mirror
 - `client name` - the name of the folder where the client will be saved
 - `source type` - source type (optional), default: `mojang`
 
-::: details Working the mirrors
+::: details Working with the mirrors
 
 To download assemblies from a mirror, you must first find its address in the community and post it in this form:
 

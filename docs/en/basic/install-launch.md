@@ -1,4 +1,4 @@
-# Getting started work
+# Getting started
 
 To configure the [Launcher](https://github.com/AuroraTeam/Launcher) you will need to create a GitHub account, since the launcher is built in the operating system in which it will be launched.
 
@@ -14,7 +14,7 @@ If you are going to use the dev version of the launcher, don't forget to check t
 
 ## Adding a key
 
-After setting up the Launcher Server, a `public.pem` file should appear in its root directory. You needs to copied it to the root of the Launcher repository. This is necessary so that the Launcher Server knows that the original Launcher is connecting to it, and not a third-party application.
+After setting up the Launcher Server, a `public.pem` file should appear in its root directory. You need to copy it to the root of the Launcher repository. This is necessary so that the Launcher Server knows that the original Launcher is connecting to it, and not a third-party application.
 
 ## Setting up Launcher
 
@@ -62,7 +62,7 @@ export const discordRPC = {
 };
 ```
 
-##### Описание настроек конфига
+##### Description of config settings
 
 - `width` - Launcher window width (in pixels)
 - `height` - Launcher window height (in pixels)
@@ -71,7 +71,7 @@ export const discordRPC = {
 - `maximizable` - the ability to expand the window to full screen
 - `fullscreenable` - ability to use full screen mode (on F11)
 - `title` - Launcher window title
-- `ws` - URL to your Launcher
-- `web` - URL to your Launcher
+- `ws` - URL to your Launcher Server
+- `web` - URL to your Launcher Server
 - `appPath` - what will be the name of the Launcher folder for the user
 - `discordRPC` - this section of settings is described in [Setting up Discord activity](./discord-rpc.md)

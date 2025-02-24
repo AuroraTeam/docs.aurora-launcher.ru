@@ -28,12 +28,12 @@ This method stores authentication data in RAM and is intended primarily for test
 auth:
   {
     type: reject
-    message: Technical work is currently underway. Please try again later.
+    message: Maintenance is currently underway. Please try again later.
   }
 ```
 
 :::info To clarify:
-Most often, this type is used for technical purposes. For example, to temporarily block access to the launcher during technical work.
+Most often, this type is used for technical purposes. For example, to temporarily block access to the launcher during maintenance.
 :::
 
 ## Setting up the `Json` type
@@ -51,7 +51,7 @@ auth:
 ```
 
 ::: info To clarify:
-In order for this type of authentication to work, you must implement [the following requests](/en/for-developers/json-auth.md) in your API.
+In order for this type of authentication to work, you must implement [the following requests](../for-developers/json-auth.md) in your API.
 :::
 
 ## Setting up the `DB` type

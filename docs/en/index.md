@@ -17,7 +17,7 @@ features:
   - icon: 🎨
     title: Easy and convenient interface customization
   - icon: 📘
-    title: Clear documentation, reasonable error output.
+    title: Clear documentation, reasonable error output
   - icon: 💾
     title: Open Source code
   - icon: ✨

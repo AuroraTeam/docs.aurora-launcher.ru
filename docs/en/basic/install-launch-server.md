@@ -1,4 +1,4 @@
-# Getting started work
+# Getting started
 
 The project is divided into two repositories:
 
@@ -8,15 +8,15 @@ The project is divided into two repositories:
 
 The setup of these two parts is done separately from each other, so let's start with the Launcher Server.
 
-## Install and setting
+## Install and configuration
 
-After you have downloaded [LauncherServer](https://github.com/AuroraTeam/AuroraLauncher/releases), place it in any folder and run it.
+After you have downloaded [Launcher Server](https://github.com/AuroraTeam/AuroraLauncher/releases), place it in any folder and run it.
 You can run it this way:
 
 ::: code-group
 
 ```cmd [Linux]
-chmod +x ./LauncherServer-linux
+chmod +x ./LauncherServer-linux // If there are no rights to execute
 ./LauncherServer-linux
 ```
 
@@ -25,7 +25,7 @@ LauncherServer-win.exe
 ```
 
 ```cmd [MacOS]
-chmod +x ./LauncherServer-macos
+chmod +x ./LauncherServer-macos // If there are no rights to execute
 ./LauncherServer-macos
 ```
 
@@ -37,7 +37,7 @@ If on MacOS you get a `permission denied` error after running `chmod +x ./Launch
 :::
 
 
-##### Arguments run LaunchServer
+##### Arguments run Launcher Server
 
 - `--host` - the listening address is specified
 - `--port` - the port to listen on is specified
@@ -93,6 +93,7 @@ Below is an example with a description of all the settings.
 `auth` - authorization method settings block, more details in the section [Auth settings](auth.md)\
 `skin` - block of settings for the method of obtaining skins, more details in the section [Setting up the skin system](system-skin.md)\
 `api` - block of settings for connecting to the Launcher Server. Contains the following settings:
+
 - `host` - internal IP from which the Launcher Server will listen for requests. Do not touch if you do not know what it is and how it works
 - `port` - port that the Launcher Server will listen to. Similar to the previous point
 - `disableListing` - disable the distribution of folders and files by the Launcher Server, it is recommended to enable when proxying files, for example through [Nginx](nginx.md)

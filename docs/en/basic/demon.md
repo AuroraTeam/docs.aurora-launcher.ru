@@ -1,7 +1,7 @@
 # Running the Launcher Server as a service
 
 To ensure stable operation of the Launcher Server, it must be run in the background.\
-In service mode, you will not be able to send commands to the launchserver. When you finish setting up, it is advisable to start the launchserver in this mode.
+In service mode, you will not be able to send commands to the launcher server. When you finish setting up, it is advisable to start the launcher server in this mode.
 
 ## Starting via `PM2`
 
@@ -32,17 +32,17 @@ List of useful commands:
 
 ## Starting via `systemd`
 
-We create a service configuration file and change the settings if necessary:
+Create a service configuration file and change the settings if necessary:
 ```sh
 sudo nano /etc/systemd/system/launcher.service
 ```
-Let's create a separate user to manage the Launcherer Server:
+Create a separate user to manage the Launcher Server:
 ```sh
 adduser launchserver --no-create-home --gecos ""
 ```
 For everything to work correctly, you will need to grant the user rights to the folder:
 ```sh
-sudo chown launchserver:launchserver path to the your Launcher Server
+sudo chown launchserver:launchserver Path to the your Launcher Server
 ```
 
 File contents:
@@ -51,7 +51,7 @@ File contents:
 Description=launcher Server
 
 [Service]
-# Specify the path where your Launch Server is located
+# Specify the path where your Launcher Server is located
 ExecStart=/home/LauncherServer-linux
 Restart=always
 RestartSec=10

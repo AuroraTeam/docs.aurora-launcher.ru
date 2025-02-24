@@ -5,7 +5,7 @@
 Some of the filtering features of Cloudflare require specific configuration rules (Rules => Configuration Rules).
 ![1.png](/cloudflare/1.webp)
 
-You only need to change the value of the full domain where you host the launchserver.\
+You only need to change the value of the full domain where you host the launcher server.\
 Also `Place at` must be specified as `First`.
 
 :::info Why is this necessary:

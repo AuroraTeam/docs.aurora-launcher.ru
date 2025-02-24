@@ -6,7 +6,7 @@ This describes how to set up security systems in the Launcher.
 
 To ensure the safety of the build on the player side, you must know the folders and files that are sensitive to changes.
 There are 2 checks:
-- During startup, the Launcher always downloads some files from the launch server.
+- During startup, the Launcher always downloads some files from the launcher server.
 - The Launcher monitors some files that should not change during the game.
 
 Let's take a closer look at the profile configuration.
