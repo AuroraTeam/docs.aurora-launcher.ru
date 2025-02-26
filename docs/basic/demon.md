@@ -46,7 +46,7 @@ sudo chown launchserver:launchserver путь до вашей папки с ла
 ```
 
 Само содержимое файла:
-```systemd
+```systemd [launcher.service]
 [Unit]
 Description=launcher Server
 

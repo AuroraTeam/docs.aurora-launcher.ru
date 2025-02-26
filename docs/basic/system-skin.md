@@ -3,7 +3,7 @@
 Для работы системы скинов необходим сервис который сможет отдавать по никнейму или по uuid файл содержимое которого будет текстура скина или плаща.  
 Пример реализации запросов: [api.aurora-launcher](https://api.aurora-launcher.ru/#tag/mojang/GET/mojang/skin)
 
-```hjson
+```hjson [LauncherServerConfig.hjson]
 skin:
     {
         skinUrl: http://localhost:8123/storage/skin?uuid={uuid}

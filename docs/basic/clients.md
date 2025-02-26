@@ -12,7 +12,7 @@
 
 ::: code-group
 
-```cmd [Команда для скачивания]
+```cmd [Команда]
 downloadclient <version> <client name> <?source type>
 ```
 
@@ -49,7 +49,7 @@ downloadclient 1.19.4 TestClient mirror
 
 Для загрузки сборок с зеркала вам необходимо сначала найти на просторах сообщества его адрес и разместить его в таком виде:
 
-```hjson
+```hjson [LauncherServerConfig.hjson]
 {
     mirrors: [
         "https://example1.com/"
@@ -72,7 +72,7 @@ downloadclient 1.19.4 TestClient mirror
 
 Файл профиля находится в папке `profiles` с именем скачанного клиента.
 
-```json
+```json [profiles/TestClient.json]
 {
     "configVersion": 0,
     "uuid": "016ed45e-93ba-45d9-972a-7de258ad778c",

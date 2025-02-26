@@ -1,6 +1,7 @@
 import { navbar as nav } from "./navbar";
 import { sidebar } from "./sidebar";
 import lightbox from "vitepress-plugin-lightbox"
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 export default {
   lang: "ru-RU",
@@ -40,12 +41,30 @@ export default {
   lastUpdated: true,
   markdown: {
     config: (md) => {
-      // Use lightbox plugin
       md.use(lightbox, {});
+      md.use(groupIconMdPlugin)
     },
     image: {
       lazyLoading: true,
     },
+  },
+  vite: {
+    plugins: [
+      groupIconVitePlugin({
+        customIcon: {
+          'windows': 'https://www.svgrepo.com/show/331786/windows-azure.svg',
+          'vanilla': 'vscode-icons:file-type-minecraft',
+          'postgresql': 'vscode-icons:file-type-pgsql',
+          'mysql': 'vscode-icons:file-type-mysql',
+          'macos': 'vscode-icons:file-type-applescript',
+          'linux': 'https://www.svgrepo.com/show/354004/linux-tux.svg',
+          'http': 'vscode-icons:file-type-nginx',
+          'без домена': 'vscode-icons:file-type-nginx',
+          '.service': 'vscode-icons:file-type-dtd',
+          '.hjson': 'vscode-icons:file-type-config',
+        },
+      })
+    ],
   },
   themeConfig: {
     logo: "/logo.svg",
