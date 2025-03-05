@@ -1,6 +1,6 @@
 # Setting up Discord activity
 
-```ts
+```ts [config.ts]
 export const discordRPC = {
     appId: '1214685301793103902',
     default: {

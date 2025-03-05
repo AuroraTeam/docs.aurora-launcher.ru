@@ -79,7 +79,7 @@ server {
     }
 }
 ```
-```nginx [No domain]
+```nginx [no domain]
 upstream ws-launcher {
     server 127.0.0.1:1370;
 }

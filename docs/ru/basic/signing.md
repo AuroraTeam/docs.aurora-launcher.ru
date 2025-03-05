@@ -27,7 +27,7 @@
 
 После генерации сертификата закидываем его в папку `ssl`(или любую другую) и редактируем файл `script/electron-build.ts`. Ищем данные строчки
 
-```ts:line-numbers=28
+```ts:line-numbers=28 [script/electron-build.ts]
 "nsis": {
             "artifactName": "${name}-Setup-${version}.${ext}"
         },
@@ -35,7 +35,7 @@
 
 И добавляем после эти строчки.
 
-```ts
+```ts [script/electron-build.ts]
 "win": {
             "target": "nsis",
             "signingHashAlgorithms": [

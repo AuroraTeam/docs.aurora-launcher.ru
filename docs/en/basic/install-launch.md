@@ -20,7 +20,7 @@ After setting up the Launcher Server, a `public.pem` file should appear in its r
 
 All settings are stored in the `config.ts` file.
 
-```ts
+```ts [config.ts]
 import publicKey from "./public.pem";
 
 export const window = {

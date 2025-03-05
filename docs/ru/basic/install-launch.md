@@ -20,7 +20,7 @@
 
 Все настройки хранятся в файле `config.ts`.
 
-```ts
+```ts [config.ts]
 import publicKey from "./public.pem";
 
 export const window = {

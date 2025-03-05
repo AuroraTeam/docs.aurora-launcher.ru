@@ -8,7 +8,7 @@
 После привязки сервера не забудьте вернуть в `server.properties` настройку `online-mode=true`
 :::
 
-```json
+```json [sw_config.json]
 {
   "javaExecutablePath": "java",
   "additionalFlags": "-Xms2048M -Xmx4096M",

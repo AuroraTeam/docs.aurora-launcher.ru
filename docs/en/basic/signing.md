@@ -27,7 +27,7 @@ For a convenient and user-friendly interface, we will use [XCA](https://www.hohn
 
 After generating the certificate, we drop it into the `ssl` folder (or any other) and edit the `script/electron-build.ts` file. We look for these lines
 
-```ts:line-numbers=28
+```ts:line-numbers=28 [script/electron-build.ts]
 "nsis": {
             "artifactName": "${name}-Setup-${version}.${ext}"
         },
@@ -35,7 +35,7 @@ After generating the certificate, we drop it into the `ssl` folder (or any other
 
 And add these lines after.
 
-```ts
+```ts [script/electron-build.ts]
 "win": {
             "target": "nsis",
             "signingHashAlgorithms": [

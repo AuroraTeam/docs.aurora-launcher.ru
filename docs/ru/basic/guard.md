@@ -10,7 +10,7 @@
 - Launcher наблюдает за некоторыми файлами которые не должны изменяться во время игры.
 
 Рассмотрим конфиг профиля по повнимательнее.
-```json
+```json [profiles/TestClient.json]
 {
     "update": ["server.dat"],
     "updateVerify": ["mods/", "config/"],

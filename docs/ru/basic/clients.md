@@ -12,7 +12,7 @@
 
 ::: code-group
 
-```cmd [Команда для скачивания]
+```cmd [Команда]
 downloadclient <version> <client name> <?source type>
 ```
 

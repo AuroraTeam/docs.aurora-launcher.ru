@@ -12,7 +12,7 @@ The last option is for advanced users is described in the article [Building Mine
 
 ::: code-group
 
-```cmd [Command for downloading]
+```cmd [Command]
 downloadclient <version> <client name> <?source type>
 ```
 
@@ -48,7 +48,7 @@ downloadclient 1.19.4 TestClient mirror
 
 To download assemblies from a mirror, you must first find its address in the community and post it in this form:
 
-```hjson
+```hjson [LauncherServerConfig.hjson]
 {
     mirrors: [
         "https://example1.com/"
@@ -71,7 +71,7 @@ The downloaded client will be placed in the path `gameFiles/clients/Client_Name`
 
 The profile file is located in the `profiles` folder with the name of the downloaded client.
 
-```json
+```json [profiles/TestClient.json]
 {
     "configVersion": 0,
     "uuid": "016ed45e-93ba-45d9-972a-7de258ad778c",

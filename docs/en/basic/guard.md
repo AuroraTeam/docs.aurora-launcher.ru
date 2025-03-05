@@ -10,7 +10,7 @@ There are 2 checks:
 - The Launcher monitors some files that should not change during the game.
 
 Let's take a closer look at the profile configuration.
-```json
+```json [profiles/TestClient.json]
 {
     "update": ["server.dat"],
     "updateVerify": ["mods/", "config/"],

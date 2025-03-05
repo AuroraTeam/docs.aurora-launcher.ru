@@ -8,7 +8,7 @@ Be sure to start the server at least once before binding!
 After binding the server, do not forget to return the setting `online-mode=true` in `server.properties`
 :::
 
-```json
+```json [sw_config.json]
 {
   "javaExecutablePath": "java",
   "additionalFlags": "-Xms2048M -Xmx4096M",

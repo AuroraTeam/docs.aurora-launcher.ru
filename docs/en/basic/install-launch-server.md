@@ -47,7 +47,7 @@ After that, you can configure it.
 All settings are stored in the `LauncherServerConfig.hjson` file.
 Below is an example with a description of all the settings.
 
-```hjson
+```hjson [LauncherServerConfig.hjson]
 {
     configVersion: 0
     projectID: 00000000-0000-0000-0000-000000000000

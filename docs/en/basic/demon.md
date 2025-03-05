@@ -46,7 +46,7 @@ sudo chown launchserver:launchserver Path to the your Launcher Server
 ```
 
 File contents:
-```systemd
+```systemd [launcher.service]
 [Unit]
 Description=launcher Server
 

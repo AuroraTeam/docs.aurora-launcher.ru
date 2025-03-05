@@ -3,7 +3,7 @@
 For the skin system to work, a service is needed that can return a file by nickname or uuid, the contents of which will be the texture of a skin or cloak.
 Example of implementing requests: [api.aurora-launcher](https://api.aurora-launcher.ru/#tag/mojang/GET/mojang/skin)
 
-```hjson
+```hjson [LauncherServerConfig.hjson]
 skin:
     {
         skinUrl: http://localhost:8123/storage/skin?uuid={uuid}
