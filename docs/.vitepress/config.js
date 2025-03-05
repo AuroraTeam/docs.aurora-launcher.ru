@@ -9,8 +9,7 @@ import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-i
 export default defineConfig ({
   lang: "ru-RU",
   title: "Aurora Launcher",
-  description:
-    "Лаунчер с удобной кастомизацией дизайна для игровых проектов Minecraft",
+  description: "Лаунчер с удобной кастомизацией дизайна для игровых проектов Minecraft",
   cleanUrls: true, 
   head: [
     [

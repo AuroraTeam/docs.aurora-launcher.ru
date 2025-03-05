@@ -38,4 +38,4 @@ export const navbar = [
       text: "Main WebSite",
       link: "https://aurora-launcher.ru",
     },
-  ];
+];
