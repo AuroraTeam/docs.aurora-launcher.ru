@@ -11,6 +11,9 @@ export default defineConfig ({
   title: "Aurora Launcher",
   description: "Лаунчер с удобной кастомизацией дизайна для игровых проектов Minecraft",
   cleanUrls: true, 
+  rewrites: {
+    'ru/:rest*': ':rest*'
+  },
   head: [
     [
       "link",
@@ -78,7 +81,6 @@ export default defineConfig ({
     root: {
       label: "Русский",
       lang: "ru",
-      link: "/ru/",
       themeConfig: {
         nav: nRu,
         sidebar: sRu,
