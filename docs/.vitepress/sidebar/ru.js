@@ -1,35 +1,35 @@
 export const sidebar = {
-    "/ru/basic/": [
+    "/basic/": [
       {
         text: "Словарь определений",
-        link: "/ru/basic/dictionary",
+        link: "/basic/dictionary",
       },
       {
         text: "Настройка Launcher Server",
         items: [
           {
             text: "Начало работы",
-            link: "/ru/basic/install-launch-server",
+            link: "/basic/install-launch-server",
           },
           {
             text: "Игровые клиенты",
-            link: "/ru/basic/clients",
+            link: "/basic/clients",
           },
           {
             text: "Настройка средств защиты",
-            link: "/ru/basic/guard",
+            link: "/basic/guard",
           },
           {
             text: "Настройка авторизации",
-            link: "/ru/basic/auth",
+            link: "/basic/auth",
           },
           {
             text: "Настройка системы скинов",
-            link: "/ru/basic/system-skin",
+            link: "/basic/system-skin",
           },
           {
             text: "Привязка Minecraft сервера",
-            link: "/ru/basic/server",
+            link: "/basic/server",
           },
         ],
       },
@@ -38,15 +38,15 @@ export const sidebar = {
         items: [
           {
             text: "Начало работы",
-            link: "/ru/basic/install-launch",
+            link: "/basic/install-launch",
           },
           {
             text: "Настройка Discord активности",
-            link: "/ru/basic/discord-rpc",
+            link: "/basic/discord-rpc",
           },
           {
             text: "Настройка сборки",
-            link: "/ru/basic/build",
+            link: "/basic/build",
           },
         ],
       },
@@ -55,49 +55,49 @@ export const sidebar = {
         items: [
           {
             text: "Подпись Launcher",
-            link: "/ru/basic/signing",
+            link: "/basic/signing",
           },
           {
             text: "Настройка Nginx",
-            link: "/ru/basic/nginx",
+            link: "/basic/nginx",
           },
           {
             text: "Настройка Сloudflare",
-            link: "/ru/basic/cloudflare",
+            link: "/basic/cloudflare",
           },
           {
             text: "Запуск в виде службы",
-            link: "/ru/basic/demon",
+            link: "/basic/demon",
           },
         ],
       },
     ],
-    "/ru/for-developers/api/": [
+    "/for-developers/api/": [
       {
         text: "Aurora API",
         items: [
           {
             text: "Общая информация",
-            link: "/ru/for-developers/api/info",
+            link: "/for-developers/api/info",
           },
           {
             text: "Список кодов ошибок",
-            link: "/ru/for-developers/api/errors",
+            link: "/for-developers/api/errors",
           },
         ],
       },
     ],
-    "/ru/for-developers/": [
+    "/for-developers/": [
       {
         text: "Прочее",
         items: [
           {
             text: "Альтернативные зеркала",
-            link: "/ru/for-developers/mirrors",
+            link: "/for-developers/mirrors",
           },
           {
             text: "Запросы для JSON авторизации",
-            link: "/ru/for-developers/json-auth",
+            link: "/for-developers/json-auth",
           },
         ],
       },
